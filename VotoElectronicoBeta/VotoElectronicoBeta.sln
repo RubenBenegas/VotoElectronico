@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VotoElectronicoBeta", "VotoElectronicoBeta\VotoElectronicoBeta.csproj", "{7785E6A6-65EE-451C-9241-9FB8B198D156}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "Entidades\Entidades.csproj", "{6C31316D-8514-4FBB-8CDF-D8A744C6C986}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reglas", "Reglas\Reglas.csproj", "{DAEF64B1-3E01-4C7B-B216-31DDF3FB479C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7785E6A6-65EE-451C-9241-9FB8B198D156}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7785E6A6-65EE-451C-9241-9FB8B198D156}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7785E6A6-65EE-451C-9241-9FB8B198D156}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7785E6A6-65EE-451C-9241-9FB8B198D156}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C31316D-8514-4FBB-8CDF-D8A744C6C986}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C31316D-8514-4FBB-8CDF-D8A744C6C986}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C31316D-8514-4FBB-8CDF-D8A744C6C986}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C31316D-8514-4FBB-8CDF-D8A744C6C986}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAEF64B1-3E01-4C7B-B216-31DDF3FB479C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAEF64B1-3E01-4C7B-B216-31DDF3FB479C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAEF64B1-3E01-4C7B-B216-31DDF3FB479C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAEF64B1-3E01-4C7B-B216-31DDF3FB479C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
