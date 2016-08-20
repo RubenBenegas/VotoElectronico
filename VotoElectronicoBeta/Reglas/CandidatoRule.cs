@@ -9,12 +9,12 @@ using Entidades;
 
 namespace Reglas
 {
-    class JornadaElectoralRule
+    class CandidatoRule
     {
         public List<Candidato> _candidatos;
-        int _cantidadCandidatos;
+      
 
-        public JornadaElectoralRule()
+        public CandidatoRule()
         {
             _candidatos = new List<Candidato>();
         }
@@ -27,22 +27,32 @@ namespace Reglas
             }
 
             _candidatos.Add(candidato);
-            _cantidadCandidatos++;
+       
         }
 
         public Candidato ObtenerCandidatoPorCodigo(string codigo)
         {
-            for (int i = 0; i < _cantidadCandidatos; i++)
+
+            foreach (var candidato in _candidatos)
             {
-                if (_candidatos[i].Codigo == codigo)
+                if (candidato.Codigo == codigo)
                 {
-                    return _candidatos[i];
+                    return candidato;
                 }
-            }
+              }
             return null;
+            }
+
+            //for (int i = 0; i < _cantidadCandidatos; i++)
+            //{
+            //    if (_candidatos[i].Codigo == codigo)
+            //    {
+            //return _candidatos
+            //    }
+            //}
+            //return null;
         }
 
     }
 
-}
 

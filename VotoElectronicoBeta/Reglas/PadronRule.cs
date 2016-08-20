@@ -27,5 +27,10 @@ namespace Reglas
             return lista;
 
         }
+
+        public void RealizarVoto()
+        {
+
+        }
     }
 }

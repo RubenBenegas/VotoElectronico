@@ -32,9 +32,11 @@ namespace VotoElectronicoBeta
             c.Partido = partidoTextBox.Text;
             c.Slogan = sloganTextBox.Text;
 
-            _candidatos.Add(c);
+            var nuevoCandidato = new 
 
-            Close();
+        //    _candidatos.Add(c);
+
+        //    Close();
         }
     }
 }

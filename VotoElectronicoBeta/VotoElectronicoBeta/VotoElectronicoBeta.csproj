@@ -123,6 +123,10 @@
       <Project>{6c31316d-8514-4fbb-8cdf-d8a744c6c986}</Project>
       <Name>Entidades</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Reglas\Reglas.csproj">
+      <Project>{daef64b1-3e01-4c7b-b216-31ddf3fb479c}</Project>
+      <Name>Reglas</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

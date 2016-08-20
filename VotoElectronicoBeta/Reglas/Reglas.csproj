@@ -41,7 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
-    <Compile Include="JornadaElectoralRule.cs" />
+    <Compile Include="CandidatoRule.cs" />
     <Compile Include="MesaRule.cs" />
     <Compile Include="PadronRule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

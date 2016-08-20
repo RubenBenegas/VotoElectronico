@@ -8,10 +8,16 @@ namespace Reglas
 {
     class VotanteRule
     {
+        int _cantidadVotos;
+
 
         public void RealizaVoto()
         {
-
+            switch ()
+            {
+                default:
+                    break;
+            }
         }
 
 
