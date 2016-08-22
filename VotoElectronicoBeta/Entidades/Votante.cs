@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class Votante
+    public class Votante: EntidadBase
     {
 
-        public int NumeroVotante { get; set; }
+        public int  NumeroVotante { get; set; }
 
         public string Nombre { get; set; }
 
@@ -19,7 +19,7 @@ namespace Entidades
 
         public string Domicilio { get; set; }
 
-
+        public bool RealizoVoto { get; set; }
 
 
     }
