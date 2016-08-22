@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    interface IEntidad
+    public interface IEntidad
     {
         Guid Id { get; set; }
     }
