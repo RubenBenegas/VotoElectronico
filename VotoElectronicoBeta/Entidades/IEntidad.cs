@@ -3,15 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Entidades;
 
-namespace Reglas
+namespace Entidades
 {
-    public class VotanteRule
+    interface IEntidad
     {
-     
-
-
-
+        Guid Id { get; set; }
     }
 }

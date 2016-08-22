@@ -41,9 +41,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
-    <Compile Include="CandidatoRule.cs" />
+    <Compile Include="EntityPersistor.cs" />
+    <Compile Include="JornadaRule.cs" />
     <Compile Include="MesaRule.cs" />
-    <Compile Include="PadronRule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VotanteRule.cs" />
   </ItemGroup>

@@ -41,6 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Candidato.cs" />
+    <Compile Include="EntidadBase.cs" />
+    <Compile Include="IEntidad.cs" />
     <Compile Include="JornadaElectoral.cs" />
     <Compile Include="Mesa.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
