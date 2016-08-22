@@ -53,7 +53,24 @@ namespace Reglas
              }
             return null;
          }
-  
 
+        public void Votar()
+        {
+
+        }
+
+        public void ImprimirComprobanteDeVoto()
+        {
+
+        }
+
+        public string MostrarResultado(string resultado)
+        {
+
+
+            return resultado;
+        }
+
+        
     }
 }

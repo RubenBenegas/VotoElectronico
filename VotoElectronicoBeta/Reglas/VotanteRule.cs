@@ -10,7 +10,10 @@ namespace Reglas
     public class VotanteRule
     {
      
+        public void Votar()
+        {
 
+        }
 
 
     }
