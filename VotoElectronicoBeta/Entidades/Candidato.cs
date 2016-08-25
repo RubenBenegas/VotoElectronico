@@ -8,9 +8,6 @@ namespace Entidades
 {
     public class Candidato: EntidadBase
     {
-
-        public Guid IdCandidato { get; set; }
-
         public string Nombre {get; set;}
 
         public string Apellido { get; set; }
@@ -18,9 +15,6 @@ namespace Entidades
         public string Partido { get; set; }
 
         public string Slogan { get; set; }
-
-
-
 
     }
 }

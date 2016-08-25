@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entidades;
+using Reglas;
 
 namespace VotoElectronicoBeta
 {
@@ -17,16 +19,55 @@ namespace VotoElectronicoBeta
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
-            var jf = new JornadaForm();
-            jf.Show();
+
+            var c = new Candidato
+            {
+                Nombre = "Ruben",
+                Apellido = "Benegas",
+                Partido = "Cambiemos",
+                Slogan = "Vamos que se puede"
+            };
+
+            var g = new CandidatoMapper();
+            g.Grabar(c);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            var idenf = new IdentificacionForm();
-            idenf.Show();
+            var r = new CandidatoMapper();
+
+            var ruben = r.ObtenerTodas().First(); 
+
+            MessageBox.Show(ruben.Id.ToString());
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            var c = new Candidato
+            {
+                Nombre = "Ruben",
+                Apellido = "Benegas",
+                Partido = "Cambiemos",
+                Slogan = "Vamos que se puede"
+            };
+
+            var g = new CandidatoMapper();
+            g.Grabar(c);
+
+            var c2 = new Candidato
+            {
+                Nombre = "Mirna",
+                Apellido = "Carreño",
+                Partido = "Peronista",
+                Slogan = "Hasta la victoria siempre"
+            };
+
+            
+            g.Grabar(c2);
         }
     }
 }

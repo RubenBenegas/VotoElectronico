@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class JornadaElectoral
+    public class JornadaElectoral: EntidadBase
     {
+        public JornadaElectoral()
+        {
+
+        }
 
         public int NroDeJornada { get; set; }
 
@@ -25,9 +29,11 @@ namespace Entidades
 
         public List<Candidato> Candidatos { get;  set; }
 
-        public List<Votante> Votantes { get; private set; }
+        public List<Votante> VotantesQueVotaron { get; private set; }
 
-        public List<Guid> IdCandidato { get; set; }
+        public List<Voto> Votos { get; set; }
+
+        
 
     }
 }

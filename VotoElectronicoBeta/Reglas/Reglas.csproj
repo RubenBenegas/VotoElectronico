@@ -30,8 +30,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>E:\json.net\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,11 +45,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseMapper.cs" />
-    <Compile Include="Class1.cs" />
+    <Compile Include="CandidatoMapper.cs" />
     <Compile Include="EntityPersistor.cs" />
+    <Compile Include="JornadaMapper.cs" />
     <Compile Include="JornadaRule.cs" />
-    <Compile Include="MesaRule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VotanteMapper.cs" />
     <Compile Include="VotanteRule.cs" />
   </ItemGroup>
   <ItemGroup>
