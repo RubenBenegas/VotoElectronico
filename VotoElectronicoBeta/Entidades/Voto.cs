@@ -9,6 +9,9 @@ namespace Entidades
    public class Voto
     {
 
-       
+        public string Mesa { get; set; }
+            
+        public Candidato RegistroVoto { get; set; }
+
     }
 }

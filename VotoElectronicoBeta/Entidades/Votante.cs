@@ -12,7 +12,7 @@ namespace Entidades
 
         public string Apellido { get; set; }
 
-        public int Documento { get; set; }
+        public string Documento { get; set; }
 
         public string Domicilio { get; set; }
 
