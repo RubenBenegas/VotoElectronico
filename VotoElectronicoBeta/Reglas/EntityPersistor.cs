@@ -42,6 +42,14 @@ namespace Reglas
             var lista = JsonConvert.DeserializeObject<List<T>>(contenido);
             return lista;
         }
+
+        public void Eliminar()
+        {
+            if (System.IO.File.Exists(_nombreArchivo))
+            {
+                System.IO.File.Delete(_nombreArchivo);
+            }
+        }
     }
 }
 

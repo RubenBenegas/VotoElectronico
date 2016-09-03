@@ -56,6 +56,13 @@ namespace Reglas
                 FirstOrDefault(p => p.Id.Equals(id));
         }
 
+        public virtual void EliminarTodas()
+        {
+
+            var persistor = new EntityPersistor<T>();
+            persistor.Eliminar();
+
+        }
 
     }
 }

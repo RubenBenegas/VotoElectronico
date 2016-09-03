@@ -25,12 +25,18 @@ namespace VotoElectronicoBeta
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-                        
-            var codigo = documentoTextBox.Text;
+                                    
+            var numeroDocumento = documentoTextBox.Text;
 
             var cv = new JornadaRule();
-            cv.ComprobarVotante(codigo);
+            cv.ComprobarVotante(numeroDocumento);
+
+           
+        }
+
+        private void cancelarButton_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

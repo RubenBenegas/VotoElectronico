@@ -9,6 +9,23 @@ namespace Reglas
 {
    public class VotanteMapper: BaseMapper<Votante>
     {
+        public Votante ObtenerPorDocumento(string documento)
+        {
 
+
+            //ObtenerTodas().FirstOrDefault(v => v.Documento == documento);
+
+            foreach (var votante in ObtenerTodas())
+            {
+                if (votante.Documento == documento)
+                {
+                    return votante;
+                }
+            }
+
+            return null;
+
+
+        }
     }
 }
