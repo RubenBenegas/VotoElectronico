@@ -44,7 +44,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.fechaTextBox = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
             fechaLabel = new System.Windows.Forms.Label();
             horaComienzoLabel = new System.Windows.Forms.Label();
             horaFinLabel = new System.Windows.Forms.Label();
@@ -175,7 +174,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(nombreLabel);
             this.groupBox1.Controls.Add(this.fechaTextBox);
             this.groupBox1.Controls.Add(this.organizadorTextBox);
@@ -194,16 +192,6 @@
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Jornada";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(193, 163);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(129, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Agregar candidatos";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // JornadaForm
             // 
@@ -233,6 +221,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox fechaTextBox;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
     }
 }

@@ -26,11 +26,20 @@ namespace VotoElectronicoBeta
         private void button1_Click(object sender, EventArgs e)
         {
                                     
-            var numeroDocumento = documentoTextBox.Text;
+            var numeroDocumentoABuscar = documentoTextBox.Text;
 
             var cv = new JornadaRule();
-            cv.ComprobarVotante(numeroDocumento);
+            var votante= cv.ComprobarVotante(numeroDocumentoABuscar);
 
+            if(votante == null)
+            {
+                MessageBox.Show("El votante no existe");
+                return;
+
+            }
+
+            var vf = new VotacionForm();
+            vf.Show();
            
         }
 

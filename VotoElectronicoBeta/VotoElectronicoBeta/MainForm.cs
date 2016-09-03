@@ -35,5 +35,11 @@ namespace VotoElectronicoBeta
             var idenf = new IdentificacionForm();
             idenf.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var cf = new CandidatoForm();
+            cf.Show();
+        }
     }
 }

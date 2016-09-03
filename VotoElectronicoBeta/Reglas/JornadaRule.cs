@@ -59,11 +59,6 @@ namespace Reglas
             var cv = new VotanteMapper();
             var votante = cv.ObtenerPorDocumento(numeroDocumento);
 
-            //if (votante == null)
-            //{
-            //    throw new ApplicationException();
-
-            //}
 
             return votante;
         }
