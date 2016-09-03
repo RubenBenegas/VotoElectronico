@@ -23,7 +23,7 @@ namespace VotoElectronicoBeta
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void aceptarButton_Click(object sender, EventArgs e)
         {
                                     
             var numeroDocumentoABuscar = documentoTextBox.Text;

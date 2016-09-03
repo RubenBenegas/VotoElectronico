@@ -36,7 +36,7 @@ namespace VotoElectronicoBeta
             idenf.Show();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void agregarCandidatoButton_Click(object sender, EventArgs e)
         {
             var cf = new CandidatoForm();
             cf.Show();

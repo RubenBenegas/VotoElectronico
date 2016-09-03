@@ -32,7 +32,7 @@
             System.Windows.Forms.Label documentoLabel;
             this.documentoTextBox = new System.Windows.Forms.TextBox();
             this.votanteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.button1 = new System.Windows.Forms.Button();
+            this.aceptarButton = new System.Windows.Forms.Button();
             this.cancelarButton = new System.Windows.Forms.Button();
             documentoLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.votanteBindingSource)).BeginInit();
@@ -59,15 +59,15 @@
             // 
             this.votanteBindingSource.DataSource = typeof(Entidades.Votante);
             // 
-            // button1
+            // aceptarButton
             // 
-            this.button1.Location = new System.Drawing.Point(41, 136);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Aceptar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.aceptarButton.Location = new System.Drawing.Point(41, 136);
+            this.aceptarButton.Name = "aceptarButton";
+            this.aceptarButton.Size = new System.Drawing.Size(75, 23);
+            this.aceptarButton.TabIndex = 5;
+            this.aceptarButton.Text = "Aceptar";
+            this.aceptarButton.UseVisualStyleBackColor = true;
+            this.aceptarButton.Click += new System.EventHandler(this.aceptarButton_Click);
             // 
             // cancelarButton
             // 
@@ -85,7 +85,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(290, 261);
             this.Controls.Add(this.cancelarButton);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.aceptarButton);
             this.Controls.Add(documentoLabel);
             this.Controls.Add(this.documentoTextBox);
             this.Name = "IdentificacionForm";
@@ -100,7 +100,7 @@
 
         private System.Windows.Forms.BindingSource votanteBindingSource;
         private System.Windows.Forms.TextBox documentoTextBox;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button aceptarButton;
         private System.Windows.Forms.Button cancelarButton;
     }
 }

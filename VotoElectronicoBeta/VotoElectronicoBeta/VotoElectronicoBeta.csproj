@@ -102,6 +102,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="VotacionForm.resx">
+      <DependentUpon>VotacionForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\DataSources\Entidades.Candidato.datasource" />
     <None Include="Properties\DataSources\Entidades.JornadaElectoral.datasource" />
     <None Include="Properties\DataSources\Entidades.Votante.datasource" />
