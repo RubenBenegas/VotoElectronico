@@ -37,9 +37,9 @@
             this.nombreTextBox = new System.Windows.Forms.TextBox();
             this.partidoTextBox = new System.Windows.Forms.TextBox();
             this.sloganTextBox = new System.Windows.Forms.TextBox();
-            this.candidatoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.aceptarButton = new System.Windows.Forms.Button();
             this.cancelarButton = new System.Windows.Forms.Button();
+            this.candidatoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             apellidoLabel = new System.Windows.Forms.Label();
             nombreLabel = new System.Windows.Forms.Label();
             partidoLabel = new System.Windows.Forms.Label();
@@ -56,14 +56,6 @@
             apellidoLabel.TabIndex = 1;
             apellidoLabel.Text = "Apellido:";
             // 
-            // apellidoTextBox
-            // 
-            this.apellidoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.candidatoBindingSource, "Apellido", true));
-            this.apellidoTextBox.Location = new System.Drawing.Point(77, 59);
-            this.apellidoTextBox.Name = "apellidoTextBox";
-            this.apellidoTextBox.Size = new System.Drawing.Size(100, 20);
-            this.apellidoTextBox.TabIndex = 0;
-            // 
             // nombreLabel
             // 
             nombreLabel.AutoSize = true;
@@ -72,14 +64,6 @@
             nombreLabel.Size = new System.Drawing.Size(47, 13);
             nombreLabel.TabIndex = 5;
             nombreLabel.Text = "Nombre:";
-            // 
-            // nombreTextBox
-            // 
-            this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.candidatoBindingSource, "Nombre", true));
-            this.nombreTextBox.Location = new System.Drawing.Point(77, 86);
-            this.nombreTextBox.Name = "nombreTextBox";
-            this.nombreTextBox.Size = new System.Drawing.Size(100, 20);
-            this.nombreTextBox.TabIndex = 1;
             // 
             // partidoLabel
             // 
@@ -90,14 +74,6 @@
             partidoLabel.TabIndex = 7;
             partidoLabel.Text = "Partido:";
             // 
-            // partidoTextBox
-            // 
-            this.partidoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.candidatoBindingSource, "Partido", true));
-            this.partidoTextBox.Location = new System.Drawing.Point(77, 112);
-            this.partidoTextBox.Name = "partidoTextBox";
-            this.partidoTextBox.Size = new System.Drawing.Size(100, 20);
-            this.partidoTextBox.TabIndex = 2;
-            // 
             // sloganLabel
             // 
             sloganLabel.AutoSize = true;
@@ -107,6 +83,30 @@
             sloganLabel.TabIndex = 9;
             sloganLabel.Text = "Slogan:";
             // 
+            // apellidoTextBox
+            // 
+            this.apellidoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.candidatoBindingSource, "Apellido", true));
+            this.apellidoTextBox.Location = new System.Drawing.Point(77, 59);
+            this.apellidoTextBox.Name = "apellidoTextBox";
+            this.apellidoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.apellidoTextBox.TabIndex = 0;
+            // 
+            // nombreTextBox
+            // 
+            this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.candidatoBindingSource, "Nombre", true));
+            this.nombreTextBox.Location = new System.Drawing.Point(77, 86);
+            this.nombreTextBox.Name = "nombreTextBox";
+            this.nombreTextBox.Size = new System.Drawing.Size(100, 20);
+            this.nombreTextBox.TabIndex = 1;
+            // 
+            // partidoTextBox
+            // 
+            this.partidoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.candidatoBindingSource, "Partido", true));
+            this.partidoTextBox.Location = new System.Drawing.Point(77, 112);
+            this.partidoTextBox.Name = "partidoTextBox";
+            this.partidoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.partidoTextBox.TabIndex = 2;
+            // 
             // sloganTextBox
             // 
             this.sloganTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.candidatoBindingSource, "Slogan", true));
@@ -115,13 +115,9 @@
             this.sloganTextBox.Size = new System.Drawing.Size(100, 20);
             this.sloganTextBox.TabIndex = 3;
             // 
-            // candidatoBindingSource
-            // 
-            this.candidatoBindingSource.DataSource = typeof(Entidades.Candidato);
-            // 
             // aceptarButton
             // 
-            this.aceptarButton.Location = new System.Drawing.Point(31, 194);
+            this.aceptarButton.Location = new System.Drawing.Point(229, 59);
             this.aceptarButton.Name = "aceptarButton";
             this.aceptarButton.Size = new System.Drawing.Size(75, 23);
             this.aceptarButton.TabIndex = 4;
@@ -131,7 +127,7 @@
             // 
             // cancelarButton
             // 
-            this.cancelarButton.Location = new System.Drawing.Point(124, 194);
+            this.cancelarButton.Location = new System.Drawing.Point(229, 89);
             this.cancelarButton.Name = "cancelarButton";
             this.cancelarButton.Size = new System.Drawing.Size(75, 23);
             this.cancelarButton.TabIndex = 5;
@@ -139,11 +135,15 @@
             this.cancelarButton.UseVisualStyleBackColor = true;
             this.cancelarButton.Click += new System.EventHandler(this.cancelarButton_Click);
             // 
+            // candidatoBindingSource
+            // 
+            this.candidatoBindingSource.DataSource = typeof(Entidades.Candidato);
+            // 
             // CandidatoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(211, 241);
+            this.ClientSize = new System.Drawing.Size(328, 204);
             this.Controls.Add(this.cancelarButton);
             this.Controls.Add(this.aceptarButton);
             this.Controls.Add(apellidoLabel);

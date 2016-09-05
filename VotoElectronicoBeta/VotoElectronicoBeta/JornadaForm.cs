@@ -16,12 +16,13 @@ namespace VotoElectronicoBeta
     {
         public JornadaForm()
         {
-
+            
             InitializeComponent();
         }
 
         private void aceptarButton_Click(object sender, EventArgs e)
         {
+            //var listaCandidatos = new List<Candidato>();
             var nuevaJornada = new JornadaElectoral
             {
                 Nombre = nombreTextBox.Text,
@@ -29,7 +30,8 @@ namespace VotoElectronicoBeta
                 HoraComienzo = horaComienzoTextBox.Text,
                 HoraFin = horaFinTextBox.Text,
                 Organizador = organizadorTextBox.Text,
-            };
+                //Candidatos = listaCandidatos,
+        };
 
             var g = new JornadaMapper();
             g.Grabar(nuevaJornada);

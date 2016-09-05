@@ -9,21 +9,19 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
 
-
 namespace VotoElectronicoBeta
 {
-    public partial class VotacionForm : Form
+    public partial class CandidatoGridForm : Form
     {
-        public VotacionForm()
+        public CandidatoGridForm()
         {
             InitializeComponent();
         }
 
-        private void dataGridView1_Load(object sender, DataGridViewCellEventArgs e)
+        private void agregarButton_Click(object sender, EventArgs e)
         {
-            var nuevosCandidatos = new Candidato();
-
-            dataGridView1.Rows.Add(nuevosCandidatos.Apellido, nuevosCandidatos.Nombre, nuevosCandidatos.Partido, nuevosCandidatos.Slogan);
+            var cf = new CandidatoForm();
+            cf.Show();
         }
     }
 }

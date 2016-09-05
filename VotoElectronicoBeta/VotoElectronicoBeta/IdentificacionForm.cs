@@ -33,7 +33,8 @@ namespace VotoElectronicoBeta
 
             if(votante == null)
             {
-                MessageBox.Show("El votante no existe");
+
+                MessageBox.Show("La persona con esta DNI no forma parte del padron.");
                 return;
 
             }

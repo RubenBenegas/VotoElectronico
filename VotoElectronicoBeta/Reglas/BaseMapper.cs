@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Entidades;
 
+
+
 namespace Reglas
 {
     public abstract class BaseMapper<T> where T: IEntidad
@@ -30,6 +32,7 @@ namespace Reglas
                     {
                         existe = true;
                     }
+
                 }
                 if (!existe)
                 {

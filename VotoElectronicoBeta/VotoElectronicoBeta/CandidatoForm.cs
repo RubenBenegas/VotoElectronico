@@ -21,7 +21,10 @@ namespace VotoElectronicoBeta
 
         private void aceptarButton_Click(object sender, EventArgs e)
         {
-            var nuevoCandidato = new Candidato
+
+            
+
+            var nuevoCandidato =new Candidato            
             {
                 Apellido = apellidoTextBox.Text,
                 Nombre = nombreTextBox.Text,
@@ -29,17 +32,33 @@ namespace VotoElectronicoBeta
                 Slogan = sloganTextBox.Text,
             };
 
+                    
+
+            nuevoCandidato = (Candidato)candidatoBindingSource.Current;
+
+            var ac = new JornadaRule();
+            ac.AgregarCandidato(nuevoCandidato);
+
             var g = new CandidatoMapper();
             g.Grabar(nuevoCandidato);
 
 
-            Close();
-            
-        }
+
+            //var r = new CandidatoMapper();
+            //var candidatoRecu = r.ObtenerTodas().FirstOrDefault();
+
+            //dataGridView1.Rows.Add(nuevoCandidato.Apellido, nuevoCandidato.Nombre, nuevoCandidato.Partido, nuevoCandidato.Slogan);
+
+                        }
 
         private void cancelarButton_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void CandidatoForm_Load(object sender, EventArgs e)
+        {
+            candidatoBindingSource.DataSource = new Candidato();
         }
     }
 }

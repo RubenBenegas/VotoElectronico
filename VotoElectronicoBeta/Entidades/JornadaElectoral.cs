@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace Entidades
 {
@@ -17,8 +18,6 @@ namespace Entidades
         public string HoraFin { get; set; }
 
         public string Organizador { get; set; }
-
-        public List<Candidato> Candidatos { get;  set; }
 
         public List<Votante> VotantesQueVotaron { get; private set; }
 

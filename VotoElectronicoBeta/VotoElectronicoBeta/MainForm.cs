@@ -38,8 +38,8 @@ namespace VotoElectronicoBeta
 
         private void agregarCandidatoButton_Click(object sender, EventArgs e)
         {
-            var cf = new CandidatoForm();
-            cf.Show();
+            var cgf = new CandidatoGridForm();
+            cgf.Show();
         }
     }
 }

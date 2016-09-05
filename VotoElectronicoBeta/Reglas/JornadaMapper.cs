@@ -7,8 +7,9 @@ using Entidades;
 
 namespace Reglas
 {
-   public class JornadaMapper: BaseMapper<JornadaElectoral>
+    public class JornadaMapper : BaseMapper<JornadaElectoral>
     {
-
     }
+
 }
+

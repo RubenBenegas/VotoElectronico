@@ -7,7 +7,7 @@ using Entidades;
 
 namespace Reglas
 {
-    public class CandidatoMapper: BaseMapper<Candidato>
+    public class CandidatoMapper : BaseMapper<Candidato>
     {
         
     }

@@ -7,25 +7,29 @@ using Entidades;
 
 namespace Reglas
 {
-   public class JornadaRule
+    public class JornadaRule
     {
-        public List<Candidato> candidatos;
+        public List<Candidato> listaCandidatos;
         public List<Votante> listaVotantes;
 
-        int acumuladorVotos = 0;
-        
         public JornadaRule()
         {
-            candidatos = new List<Candidato>();
+            listaCandidatos = new List<Candidato>();
             listaVotantes = new List<Votante>();
         }
 
         public void AgregarCandidato(Candidato candidato)
         {
-            candidatos.Add(candidato);
+            var obt = new CandidatoMapper();
+            var candidatos = obt.ObtenerTodas();
+            listaCandidatos.Add(candidato);
+
+            var grab = new CandidatoMapper();
+            grab.Grabar(candidato);
         }
 
-     
+
+
 
         public List<Votante> CargarVotantes(List<Votante> listaVotantes)
         {
@@ -50,8 +54,8 @@ namespace Reglas
                 g.Grabar(listaVotantes);
             }
             return listaVotantes;
-            
-         }
+
+        }
 
         public Votante ComprobarVotante(string numeroDocumento)
         {
@@ -63,12 +67,14 @@ namespace Reglas
             return votante;
         }
 
-       public void Votar()
+        public void Votar()
         {
+            int votos = 0, totalVotos = 0;
+            totalVotos = votos + 1;
 
         }
 
-        public void ImprimirComprobanteDeVoto()
+        public void ImprimirTiketDeVoto()
         {
 
         }
@@ -82,4 +88,7 @@ namespace Reglas
 
 
     }
-    }
+}
+
+
+
