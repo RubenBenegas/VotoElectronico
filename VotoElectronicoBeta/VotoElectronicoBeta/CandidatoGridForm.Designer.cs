@@ -32,24 +32,23 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CandidatoGridForm));
             this.candidatoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.candidatoBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.candidatoBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.candidatoDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.agregarButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.candidatoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.candidatoBindingNavigator)).BeginInit();
             this.candidatoBindingNavigator.SuspendLayout();
@@ -90,6 +89,31 @@
             this.candidatoBindingNavigator.TabIndex = 0;
             this.candidatoBindingNavigator.Text = "bindingNavigator1";
             // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Eliminar";
+            // 
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -122,16 +146,9 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Posición actual";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
-            this.bindingNavigatorCountItem.Text = "de {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
@@ -154,35 +171,17 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Eliminar";
             // 
             // candidatoBindingNavigatorSaveItem
             // 
             this.candidatoBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.candidatoBindingNavigatorSaveItem.Enabled = false;
             this.candidatoBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("candidatoBindingNavigatorSaveItem.Image")));
             this.candidatoBindingNavigatorSaveItem.Name = "candidatoBindingNavigatorSaveItem";
             this.candidatoBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.candidatoBindingNavigatorSaveItem.Text = "Guardar datos";
+            this.candidatoBindingNavigatorSaveItem.Click += new System.EventHandler(this.candidatoBindingNavigatorSaveItem_Click);
             // 
             // candidatoDataGridView
             // 
@@ -194,10 +193,11 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
             this.candidatoDataGridView.DataSource = this.candidatoBindingSource;
-            this.candidatoDataGridView.Location = new System.Drawing.Point(34, 142);
+            this.candidatoDataGridView.Location = new System.Drawing.Point(12, 42);
             this.candidatoDataGridView.Name = "candidatoDataGridView";
-            this.candidatoDataGridView.Size = new System.Drawing.Size(444, 220);
+            this.candidatoDataGridView.Size = new System.Drawing.Size(510, 300);
             this.candidatoDataGridView.TabIndex = 1;
+            this.candidatoDataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.candidatoDataGridView_CellDoubleClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -223,26 +223,16 @@
             this.dataGridViewTextBoxColumn4.HeaderText = "Slogan";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
-            // agregarButton
-            // 
-            this.agregarButton.Location = new System.Drawing.Point(43, 75);
-            this.agregarButton.Name = "agregarButton";
-            this.agregarButton.Size = new System.Drawing.Size(75, 23);
-            this.agregarButton.TabIndex = 2;
-            this.agregarButton.Text = "Agregar";
-            this.agregarButton.UseVisualStyleBackColor = true;
-            this.agregarButton.Click += new System.EventHandler(this.agregarButton_Click);
-            // 
-            // CandidaatoGridForm
+            // CandidatoGridForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(593, 382);
-            this.Controls.Add(this.agregarButton);
             this.Controls.Add(this.candidatoDataGridView);
             this.Controls.Add(this.candidatoBindingNavigator);
-            this.Name = "CandidaatoGridForm";
+            this.Name = "CandidatoGridForm";
             this.Text = "CandidaatoGridForm";
+            this.Load += new System.EventHandler(this.CandidatoGridForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.candidatoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.candidatoBindingNavigator)).EndInit();
             this.candidatoBindingNavigator.ResumeLayout(false);
@@ -274,6 +264,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.Button agregarButton;
     }
 }

@@ -59,7 +59,7 @@
             this.agregarCandidatoButton.Name = "agregarCandidatoButton";
             this.agregarCandidatoButton.Size = new System.Drawing.Size(152, 58);
             this.agregarCandidatoButton.TabIndex = 6;
-            this.agregarCandidatoButton.Text = "Agregar candidatos";
+            this.agregarCandidatoButton.Text = "Altas, bajas y modificaciones de candidatos";
             this.agregarCandidatoButton.UseVisualStyleBackColor = true;
             this.agregarCandidatoButton.Click += new System.EventHandler(this.agregarCandidatoButton_Click);
             // 

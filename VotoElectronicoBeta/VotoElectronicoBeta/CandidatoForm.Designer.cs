@@ -34,12 +34,12 @@
             System.Windows.Forms.Label partidoLabel;
             System.Windows.Forms.Label sloganLabel;
             this.apellidoTextBox = new System.Windows.Forms.TextBox();
+            this.candidatoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nombreTextBox = new System.Windows.Forms.TextBox();
             this.partidoTextBox = new System.Windows.Forms.TextBox();
             this.sloganTextBox = new System.Windows.Forms.TextBox();
             this.aceptarButton = new System.Windows.Forms.Button();
             this.cancelarButton = new System.Windows.Forms.Button();
-            this.candidatoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             apellidoLabel = new System.Windows.Forms.Label();
             nombreLabel = new System.Windows.Forms.Label();
             partidoLabel = new System.Windows.Forms.Label();
@@ -91,6 +91,10 @@
             this.apellidoTextBox.Size = new System.Drawing.Size(100, 20);
             this.apellidoTextBox.TabIndex = 0;
             // 
+            // candidatoBindingSource
+            // 
+            this.candidatoBindingSource.DataSource = typeof(Entidades.Candidato);
+            // 
             // nombreTextBox
             // 
             this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.candidatoBindingSource, "Nombre", true));
@@ -135,10 +139,6 @@
             this.cancelarButton.UseVisualStyleBackColor = true;
             this.cancelarButton.Click += new System.EventHandler(this.cancelarButton_Click);
             // 
-            // candidatoBindingSource
-            // 
-            this.candidatoBindingSource.DataSource = typeof(Entidades.Candidato);
-            // 
             // CandidatoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -163,13 +163,12 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.BindingSource candidatoBindingSource;
         private System.Windows.Forms.TextBox apellidoTextBox;
         private System.Windows.Forms.TextBox nombreTextBox;
         private System.Windows.Forms.TextBox partidoTextBox;
         private System.Windows.Forms.TextBox sloganTextBox;
         private System.Windows.Forms.Button aceptarButton;
         private System.Windows.Forms.Button cancelarButton;
+        public System.Windows.Forms.BindingSource candidatoBindingSource;
     }
 }

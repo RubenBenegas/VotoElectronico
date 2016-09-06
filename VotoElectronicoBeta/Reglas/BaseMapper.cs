@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Entidades;
 
 
@@ -17,16 +15,18 @@ namespace Reglas
             Grabar(lista);
         }
 
-        public virtual void Grabar(List<T> entidades)
+        public virtual void Grabar(IEnumerable<T> entidades)
         {
+            var listaEntidades = entidades.ToList();
+
             var itemsAGrabar = new List<T>();
-            itemsAGrabar.AddRange(entidades);
+            itemsAGrabar.AddRange(listaEntidades);
 
             var itemsExistentes = ObtenerTodas().ToList();
             foreach (var itemExist in itemsExistentes)
             {
                 var existe = false;
-                foreach (var item in entidades)
+                foreach (var item in listaEntidades)
                 {
                     if (item.Id.Equals(itemExist.Id))
                     {
@@ -59,12 +59,29 @@ namespace Reglas
                 FirstOrDefault(p => p.Id.Equals(id));
         }
 
+        public virtual void EliminarUna(Guid id)
+        {
+            var itemsAGrabar = new List<T>();
+
+            var itemsExistentes = ObtenerTodas().ToList();
+            // Agregamos todos lo de la lista menos el item a eliminar
+            foreach (var item in itemsExistentes)
+            {
+                if (!item.Id.Equals(id))
+                {
+                    itemsAGrabar.Add(item);
+                }
+            }
+
+            // Y grabamos la lista que tiene todos menos el que queremos eliminar
+            var persistor = new EntityPersistor<T>();
+            persistor.Grabar(itemsAGrabar);
+        }
+
         public virtual void EliminarTodas()
         {
-
             var persistor = new EntityPersistor<T>();
             persistor.Eliminar();
-
         }
 
     }
