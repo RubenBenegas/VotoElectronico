@@ -30,8 +30,7 @@ namespace VotoElectronicoBeta
             var nuevoPadron = new List<Votante>();
             var cv = new JornadaRule();
             cv.CargarVotantes(nuevoPadron);
-            
-            
+
             var idenf = new IdentificacionForm();
             idenf.Show();
         }

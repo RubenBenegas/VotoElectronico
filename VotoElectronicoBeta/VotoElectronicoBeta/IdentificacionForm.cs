@@ -39,6 +39,8 @@ namespace VotoElectronicoBeta
 
             }
 
+            Close();
+
             var vf = new VotacionForm();
             vf.Show();
            

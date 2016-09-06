@@ -19,12 +19,6 @@ namespace VotoElectronicoBeta
             InitializeComponent();
         }
 
-        private void agregarButton_Click(object sender, EventArgs e)
-        {
-            var cf = new CandidatoForm();
-            cf.Show();
-        }
-
         private void CandidatoGridForm_Load(object sender, EventArgs e)
         {
             // Cuando cargamos el formulario obtenemos los datos.
@@ -53,5 +47,7 @@ namespace VotoElectronicoBeta
             cf.candidatoBindingSource.DataSource = candidatoBindingSource.Current; // El current nos da el objeto que esta seleccionado
             cf.ShowDialog();
         }
+
+        
     }
 }

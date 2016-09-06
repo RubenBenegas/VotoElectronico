@@ -21,6 +21,7 @@ namespace Reglas
                 {
                     return votante;
                 }
+
             }
 
             return null;

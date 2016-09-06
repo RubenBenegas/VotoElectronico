@@ -29,66 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.partidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sloganDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.candidatoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.votarButton = new System.Windows.Forms.Button();
             this.imprimirButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.candidatoDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.candidatoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.candidatoDataGridView)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.apellidoDataGridViewTextBoxColumn,
-            this.nombreDataGridViewTextBoxColumn,
-            this.partidoDataGridViewTextBoxColumn,
-            this.sloganDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.candidatoBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 55);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(543, 150);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_Load);
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            // 
-            // apellidoDataGridViewTextBoxColumn
-            // 
-            this.apellidoDataGridViewTextBoxColumn.DataPropertyName = "Apellido";
-            this.apellidoDataGridViewTextBoxColumn.HeaderText = "Apellido";
-            this.apellidoDataGridViewTextBoxColumn.Name = "apellidoDataGridViewTextBoxColumn";
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            // 
-            // partidoDataGridViewTextBoxColumn
-            // 
-            this.partidoDataGridViewTextBoxColumn.DataPropertyName = "Partido";
-            this.partidoDataGridViewTextBoxColumn.HeaderText = "Partido";
-            this.partidoDataGridViewTextBoxColumn.Name = "partidoDataGridViewTextBoxColumn";
-            // 
-            // sloganDataGridViewTextBoxColumn
-            // 
-            this.sloganDataGridViewTextBoxColumn.DataPropertyName = "Slogan";
-            this.sloganDataGridViewTextBoxColumn.HeaderText = "Slogan";
-            this.sloganDataGridViewTextBoxColumn.Name = "sloganDataGridViewTextBoxColumn";
             // 
             // candidatoBindingSource
             // 
@@ -96,48 +47,88 @@
             // 
             // votarButton
             // 
-            this.votarButton.Location = new System.Drawing.Point(12, 221);
+            this.votarButton.Location = new System.Drawing.Point(24, 221);
             this.votarButton.Name = "votarButton";
             this.votarButton.Size = new System.Drawing.Size(143, 150);
             this.votarButton.TabIndex = 1;
             this.votarButton.Text = "Votar";
             this.votarButton.UseVisualStyleBackColor = true;
+            this.votarButton.Click += new System.EventHandler(this.votarButton_Click);
             // 
             // imprimirButton
             // 
-            this.imprimirButton.Location = new System.Drawing.Point(412, 221);
+            this.imprimirButton.Location = new System.Drawing.Point(325, 221);
             this.imprimirButton.Name = "imprimirButton";
             this.imprimirButton.Size = new System.Drawing.Size(143, 150);
             this.imprimirButton.TabIndex = 2;
             this.imprimirButton.Text = "Imprimir tiket";
             this.imprimirButton.UseVisualStyleBackColor = true;
             // 
+            // candidatoDataGridView
+            // 
+            this.candidatoDataGridView.AutoGenerateColumns = false;
+            this.candidatoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.candidatoDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4});
+            this.candidatoDataGridView.DataSource = this.candidatoBindingSource;
+            this.candidatoDataGridView.Location = new System.Drawing.Point(24, 12);
+            this.candidatoDataGridView.Name = "candidatoDataGridView";
+            this.candidatoDataGridView.Size = new System.Drawing.Size(444, 192);
+            this.candidatoDataGridView.TabIndex = 2;
+
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Nombre";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Apellido";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Apellido";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Partido";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Partido";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Slogan";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Slogan";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
             // VotacionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(625, 423);
+            this.ClientSize = new System.Drawing.Size(489, 423);
+            this.Controls.Add(this.candidatoDataGridView);
             this.Controls.Add(this.imprimirButton);
             this.Controls.Add(this.votarButton);
-            this.Controls.Add(this.dataGridView1);
             this.Name = "VotacionForm";
             this.Text = "VotacionForm";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.VotacionForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.candidatoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.candidatoDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource candidatoBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn apellidoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn partidoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sloganDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button votarButton;
         private System.Windows.Forms.Button imprimirButton;
+        private System.Windows.Forms.DataGridView candidatoDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
     }
 }

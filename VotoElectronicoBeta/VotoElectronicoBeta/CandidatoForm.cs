@@ -22,18 +22,8 @@ namespace VotoElectronicoBeta
         private void aceptarButton_Click(object sender, EventArgs e)
         {
 
-            
-
-            var nuevoCandidato =new Candidato            
-            {
-                Apellido = apellidoTextBox.Text,
-                Nombre = nombreTextBox.Text,
-                Partido = partidoTextBox.Text,
-                Slogan = sloganTextBox.Text,
-            };
-
-                    
-
+            var nuevoCandidato = new Candidato();            
+        
             nuevoCandidato = (Candidato)candidatoBindingSource.Current;
 
             var ac = new JornadaRule();
@@ -42,14 +32,8 @@ namespace VotoElectronicoBeta
             var g = new CandidatoMapper();
             g.Grabar(nuevoCandidato);
 
-
-
-            //var r = new CandidatoMapper();
-            //var candidatoRecu = r.ObtenerTodas().FirstOrDefault();
-
-            //dataGridView1.Rows.Add(nuevoCandidato.Apellido, nuevoCandidato.Nombre, nuevoCandidato.Partido, nuevoCandidato.Slogan);
-
-                        }
+            Close();
+        }
 
         private void cancelarButton_Click(object sender, EventArgs e)
         {

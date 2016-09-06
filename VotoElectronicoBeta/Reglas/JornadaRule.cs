@@ -9,27 +9,27 @@ namespace Reglas
 {
     public class JornadaRule
     {
-        public List<Candidato> listaCandidatos;
-        public List<Votante> listaVotantes;
+        private List<JornadaElectoral> _jornadas;
+        private List<Candidato> listaCandidatos;
+        private List<Votante> listaVotantes;
 
         public JornadaRule()
         {
+            _jornadas = new List<JornadaElectoral>();
             listaCandidatos = new List<Candidato>();
             listaVotantes = new List<Votante>();
         }
+
 
         public void AgregarCandidato(Candidato candidato)
         {
             var obt = new CandidatoMapper();
             var candidatos = obt.ObtenerTodas();
-            listaCandidatos.Add(candidato);
+            listaCandidatos.Add(candidato);          
 
             var grab = new CandidatoMapper();
             grab.Grabar(candidato);
         }
-
-
-
 
         public List<Votante> CargarVotantes(List<Votante> listaVotantes)
         {
@@ -63,15 +63,14 @@ namespace Reglas
             var cv = new VotanteMapper();
             var votante = cv.ObtenerPorDocumento(numeroDocumento);
 
-
             return votante;
+
+          
         }
 
-        public void Votar()
+        public void Votar(Candidato candidatoVoto)
         {
-            int votos = 0, totalVotos = 0;
-            totalVotos = votos + 1;
-
+            candidatoVoto.NumeroDeVotos = candidatoVoto.NumeroDeVotos + 1;
         }
 
         public void ImprimirTiketDeVoto()
