@@ -1,6 +1,6 @@
 ﻿namespace VotoElectronicoBeta
 {
-    partial class VotacionForm
+    partial class ResultadoForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,31 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.candidatoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.votarButton = new System.Windows.Forms.Button();
             this.candidatoDataGridView = new System.Windows.Forms.DataGridView();
+            this.candidatoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.candidatoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.candidatoDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.candidatoBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // candidatoBindingSource
-            // 
-            this.candidatoBindingSource.DataSource = typeof(Entidades.Candidato);
-            // 
-            // votarButton
-            // 
-            this.votarButton.Location = new System.Drawing.Point(482, 108);
-            this.votarButton.Name = "votarButton";
-            this.votarButton.Size = new System.Drawing.Size(143, 90);
-            this.votarButton.TabIndex = 1;
-            this.votarButton.Text = "Votar";
-            this.votarButton.UseVisualStyleBackColor = true;
-            this.votarButton.Click += new System.EventHandler(this.votarButton_Click);
             // 
             // candidatoDataGridView
             // 
@@ -62,17 +48,29 @@
             this.candidatoDataGridView.AutoGenerateColumns = false;
             this.candidatoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.candidatoDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
             this.candidatoDataGridView.DataSource = this.candidatoBindingSource;
-            this.candidatoDataGridView.Location = new System.Drawing.Point(21, 54);
+            this.candidatoDataGridView.Location = new System.Drawing.Point(12, 48);
             this.candidatoDataGridView.Name = "candidatoDataGridView";
             this.candidatoDataGridView.ReadOnly = true;
             this.candidatoDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.candidatoDataGridView.Size = new System.Drawing.Size(444, 192);
-            this.candidatoDataGridView.TabIndex = 2;
+            this.candidatoDataGridView.Size = new System.Drawing.Size(544, 220);
+            this.candidatoDataGridView.TabIndex = 1;
+            // 
+            // candidatoBindingSource
+            // 
+            this.candidatoBindingSource.DataSource = typeof(Entidades.Candidato);
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "NumeroDeVotos";
+            this.dataGridViewTextBoxColumn5.HeaderText = "NumeroDeVotos";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -105,35 +103,35 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(241, 9);
+            this.label1.Location = new System.Drawing.Point(72, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(193, 24);
+            this.label1.Size = new System.Drawing.Size(428, 24);
             this.label1.TabIndex = 20;
-            this.label1.Text = "REALICE SU VOTO";
+            this.label1.Text = "RESULTADO DE LA JORNADA ELECTORAL";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // VotacionForm
+            // ResultadoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(652, 285);
+            this.ClientSize = new System.Drawing.Size(576, 314);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.candidatoDataGridView);
-            this.Controls.Add(this.votarButton);
-            this.Name = "VotacionForm";
+            this.Name = "ResultadoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "VotacionForm";
-            this.Load += new System.EventHandler(this.VotacionForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.candidatoBindingSource)).EndInit();
+            this.Text = "ResultadoForm";
+            this.Load += new System.EventHandler(this.ResultadoForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.candidatoDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.candidatoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
         private System.Windows.Forms.BindingSource candidatoBindingSource;
-        private System.Windows.Forms.Button votarButton;
         private System.Windows.Forms.DataGridView candidatoDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;

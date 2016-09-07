@@ -9,13 +9,13 @@ namespace Reglas
 {
     public class JornadaRule
     {
-        private List<JornadaElectoral> _jornadas;
+        
         private List<Candidato> listaCandidatos;
         private List<Votante> listaVotantes;
 
         public JornadaRule()
         {
-            _jornadas = new List<JornadaElectoral>();
+            
             listaCandidatos = new List<Candidato>();
             listaVotantes = new List<Votante>();
         }
@@ -73,19 +73,27 @@ namespace Reglas
             candidatoVoto.NumeroDeVotos = candidatoVoto.NumeroDeVotos + 1;
         }
 
-        public void ImprimirTiketDeVoto()
+        public void ImprimirTicketDeVoto()
         {
 
         }
 
-        public string MostrarResultado(string resultado)
+        //Arreglar
+        public IEnumerable<int> ObtenerCandidatosPorVotos(int numeroVotos)
         {
 
+            var candidatosOrden =
+                                    from candidato in listaCandidatos
+                                    where candidato.NumeroDeVotos.Equals(numeroVotos)
+                                    orderby candidato.NumeroDeVotos descending
+                                    select candidato.NumeroDeVotos;
 
-            return resultado;
+
+           
+
+            return candidatosOrden;
         }
-
-
+        
     }
 }
 

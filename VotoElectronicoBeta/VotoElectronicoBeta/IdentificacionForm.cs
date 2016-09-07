@@ -34,7 +34,7 @@ namespace VotoElectronicoBeta
             if(votante == null)
             {
 
-                MessageBox.Show("La persona con esta DNI no forma parte del padron.");
+                MessageBox.Show("La persona con este DNI no forma parte del padron.");
                 return;
 
             }

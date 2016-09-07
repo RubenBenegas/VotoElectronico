@@ -40,5 +40,10 @@ namespace VotoElectronicoBeta
             var cgf = new CandidatoGridForm();
             cgf.Show();
         }
+
+        private void salirButton_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

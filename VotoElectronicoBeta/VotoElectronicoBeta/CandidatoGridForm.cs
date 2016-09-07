@@ -48,6 +48,9 @@ namespace VotoElectronicoBeta
             cf.ShowDialog();
         }
 
-        
+        private void salirButton_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

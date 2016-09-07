@@ -43,6 +43,9 @@ namespace VotoElectronicoBeta
             MessageBox.Show("Su voto fue registrado con exito.");
 
             Close();
+
+            var rf = new ResultadoForm();
+            rf.Show();
         }
     }
 }

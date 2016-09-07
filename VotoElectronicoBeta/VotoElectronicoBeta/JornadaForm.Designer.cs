@@ -136,7 +136,7 @@
             // 
             // aceptarButton
             // 
-            this.aceptarButton.Location = new System.Drawing.Point(151, 212);
+            this.aceptarButton.Location = new System.Drawing.Point(153, 172);
             this.aceptarButton.Name = "aceptarButton";
             this.aceptarButton.Size = new System.Drawing.Size(75, 23);
             this.aceptarButton.TabIndex = 6;
@@ -146,7 +146,7 @@
             // 
             // Cancelar
             // 
-            this.Cancelar.Location = new System.Drawing.Point(247, 212);
+            this.Cancelar.Location = new System.Drawing.Point(249, 172);
             this.Cancelar.Name = "Cancelar";
             this.Cancelar.Size = new System.Drawing.Size(75, 23);
             this.Cancelar.TabIndex = 7;
@@ -188,7 +188,7 @@
             this.groupBox1.Controls.Add(this.horaComienzoTextBox);
             this.groupBox1.Location = new System.Drawing.Point(34, 49);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(364, 264);
+            this.groupBox1.Size = new System.Drawing.Size(364, 223);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Jornada";
@@ -197,10 +197,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(429, 339);
+            this.ClientSize = new System.Drawing.Size(429, 291);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Name = "JornadaForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "JornadaForm";
             ((System.ComponentModel.ISupportInitialize)(this.jornadaElectoralBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);

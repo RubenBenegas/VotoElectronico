@@ -34,14 +34,17 @@
             this.votanteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.aceptarButton = new System.Windows.Forms.Button();
             this.cancelarButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             documentoLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.votanteBindingSource)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // documentoLabel
             // 
             documentoLabel.AutoSize = true;
-            documentoLabel.Location = new System.Drawing.Point(52, 66);
+            documentoLabel.Location = new System.Drawing.Point(17, 32);
             documentoLabel.Name = "documentoLabel";
             documentoLabel.Size = new System.Drawing.Size(65, 13);
             documentoLabel.TabIndex = 3;
@@ -50,9 +53,12 @@
             // documentoTextBox
             // 
             this.documentoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.votanteBindingSource, "Documento", true));
-            this.documentoTextBox.Location = new System.Drawing.Point(123, 63);
+            this.documentoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.documentoTextBox.Location = new System.Drawing.Point(88, 29);
+            this.documentoTextBox.MaxLength = 8;
             this.documentoTextBox.Name = "documentoTextBox";
-            this.documentoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.documentoTextBox.PasswordChar = '•';
+            this.documentoTextBox.Size = new System.Drawing.Size(80, 23);
             this.documentoTextBox.TabIndex = 4;
             // 
             // votanteBindingSource
@@ -61,7 +67,7 @@
             // 
             // aceptarButton
             // 
-            this.aceptarButton.Location = new System.Drawing.Point(41, 136);
+            this.aceptarButton.Location = new System.Drawing.Point(208, 27);
             this.aceptarButton.Name = "aceptarButton";
             this.aceptarButton.Size = new System.Drawing.Size(75, 23);
             this.aceptarButton.TabIndex = 5;
@@ -71,7 +77,7 @@
             // 
             // cancelarButton
             // 
-            this.cancelarButton.Location = new System.Drawing.Point(152, 136);
+            this.cancelarButton.Location = new System.Drawing.Point(208, 56);
             this.cancelarButton.Name = "cancelarButton";
             this.cancelarButton.Size = new System.Drawing.Size(75, 23);
             this.cancelarButton.TabIndex = 6;
@@ -79,20 +85,42 @@
             this.cancelarButton.UseVisualStyleBackColor = true;
             this.cancelarButton.Click += new System.EventHandler(this.cancelarButton_Click);
             // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(17, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(280, 24);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "INGRECE SU CONTRASEÑA";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(documentoLabel);
+            this.groupBox1.Controls.Add(this.documentoTextBox);
+            this.groupBox1.Controls.Add(this.cancelarButton);
+            this.groupBox1.Controls.Add(this.aceptarButton);
+            this.groupBox1.Location = new System.Drawing.Point(12, 54);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(299, 100);
+            this.groupBox1.TabIndex = 21;
+            this.groupBox1.TabStop = false;
+            // 
             // IdentificacionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(290, 261);
-            this.Controls.Add(this.cancelarButton);
-            this.Controls.Add(this.aceptarButton);
-            this.Controls.Add(documentoLabel);
-            this.Controls.Add(this.documentoTextBox);
+            this.ClientSize = new System.Drawing.Size(323, 163);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.label1);
             this.Name = "IdentificacionForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "IdentificacionForm";
             ((System.ComponentModel.ISupportInitialize)(this.votanteBindingSource)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -102,5 +130,7 @@
         private System.Windows.Forms.TextBox documentoTextBox;
         private System.Windows.Forms.Button aceptarButton;
         private System.Windows.Forms.Button cancelarButton;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
