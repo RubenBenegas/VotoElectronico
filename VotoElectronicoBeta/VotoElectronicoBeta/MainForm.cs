@@ -48,8 +48,8 @@ namespace VotoElectronicoBeta
 
         private void button3_Click(object sender, EventArgs e)
         {
-            var jr2 = new JornadaRule();
-            jr2.ObtenerResultado(); 
+            var af = new AdminForm();
+            af.Show();
 
 
         }

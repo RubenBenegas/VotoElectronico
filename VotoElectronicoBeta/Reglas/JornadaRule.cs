@@ -13,19 +13,20 @@ namespace Reglas
         private List<JornadaElectoral> listaJornadas;
         private List<Candidato> listaCandidatos;
         private List<Votante> listaVotantes;
-
+        private List<Administrador> listaAdmin;
         public JornadaRule()
         {
             listaJornadas = new List<JornadaElectoral>();
             listaCandidatos = new List<Candidato>();
             listaVotantes = new List<Votante>();
+            listaAdmin = new List<Administrador>();
         }
 
         public void AgregarJornada(JornadaElectoral jornadaNueva)
         {
             listaJornadas.Add(jornadaNueva);
 
-          
+
             var jm = new JornadaMapper();
             jm.Grabar(jornadaNueva);
 
@@ -36,11 +37,38 @@ namespace Reglas
             var obt = new CandidatoMapper();
             var candidatos = obt.ObtenerTodas();
             listaCandidatos.Add(candidatoNuevo);
-            
-           
+
+
 
             var grab = new CandidatoMapper();
             grab.Grabar(candidatoNuevo);
+        }
+
+        public List<Administrador> CargarAdminins (List<Administrador> listaAdmin)
+        {
+            var g = new AdministradorMapper();
+            var adminis = g.ObtenerTodas().ToList<Administrador>();
+             
+            if (adminis.Count == 0)
+            {
+                listaAdmin.Add(new Administrador { Contraseña = "12345678" });
+                listaAdmin.Add(new Administrador { Contraseña = "87654321" });
+                g.Grabar(listaAdmin);
+            }    
+            
+            
+            return listaAdmin;
+        }
+
+        public Administrador ComprobarAdmin(string contraseña)
+        {
+
+            var ca = new AdministradorMapper();
+            var admin = ca.ObtenerPorContraseña(contraseña);
+
+            return admin;
+
+
         }
 
         public List<Votante> CargarVotantes(List<Votante> listaVotantes)
@@ -53,7 +81,7 @@ namespace Reglas
             {
                 listaVotantes.Add(new Votante { Nombre = "Julian", Apellido = "Allende", Documento = "00000001", Domicilio = "Los pinos 15" });
                 listaVotantes.Add(new Votante { Nombre = "Ruben", Apellido = "Benegas", Documento = "00000002", Domicilio = "San Martin 145" });
-                listaVotantes.Add(new Votante { Nombre = "Mirna", Apellido = "Carreño", Documento = "000000003", Domicilio = "Siempre Viva S/N" });
+                listaVotantes.Add(new Votante { Nombre = "Mirna", Apellido = "Carreño", Documento = "00000003", Domicilio = "Siempre Viva S/N" });
                 listaVotantes.Add(new Votante { Nombre = "Aaron", Apellido = "Lacava", Documento = "00000004", Domicilio = "Rojo 123" });
                 listaVotantes.Add(new Votante { Nombre = "Pedro", Apellido = "Cuello", Documento = "00000005", Domicilio = "Azul 456" });
                 listaVotantes.Add(new Votante { Nombre = "Pablo", Apellido = "Bustos", Documento = "00000006", Domicilio = "Amarillo 789" });
@@ -77,6 +105,7 @@ namespace Reglas
             var cv = new VotanteMapper();
             var votante = cv.ObtenerPorDocumento(numeroDocumento);
 
+            
             
             return votante;
             

@@ -42,27 +42,16 @@ namespace VotoElectronicoBeta
             
             MessageBox.Show("Su voto fue registrado con exito.");
 
-            ImprimirTicket();
+            
 
             Close();
+
+            var tf = new TicketForm();
+            tf.Show();
             
         }
 
-        private void ImprimirTicket()
-
-        {
-            var path = System.Windows.Forms.Application.StartupPath;
-
-            Bitmap imagen;
-            Graphics g = this.CreateGraphics();
-            Size s = this.Size;
-            imagen = new Bitmap(s.Width, s.Height, g);
-            Graphics g2 = Graphics.FromImage(imagen);
-            g2.CopyFromScreen(this.Location.X, this.Location.Y, 0, 0, s);
-
-            imagen.Save(path + "\\" + "imagen.jPEG");
-
-        }
+        
     }
 
 }

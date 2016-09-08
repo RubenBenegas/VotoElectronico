@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdministradorMapper.cs" />
     <Compile Include="BaseMapper.cs" />
     <Compile Include="CandidatoMapper.cs" />
     <Compile Include="EntityPersistor.cs" />

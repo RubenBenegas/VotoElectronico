@@ -96,7 +96,7 @@
             // 
             // salirButton
             // 
-            this.salirButton.Location = new System.Drawing.Point(20, 19);
+            this.salirButton.Location = new System.Drawing.Point(264, 315);
             this.salirButton.Name = "salirButton";
             this.salirButton.Size = new System.Drawing.Size(152, 54);
             this.salirButton.TabIndex = 10;
@@ -106,7 +106,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.salirButton);
+            this.groupBox3.Controls.Add(this.button3);
             this.groupBox3.Location = new System.Drawing.Point(244, 180);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(200, 100);
@@ -129,11 +129,11 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(264, 323);
+            this.button3.Location = new System.Drawing.Point(20, 19);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(152, 54);
             this.button3.TabIndex = 21;
-            this.button3.Text = "button3";
+            this.button3.Text = "ObtenerResultado";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -142,7 +142,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(461, 398);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.salirButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
