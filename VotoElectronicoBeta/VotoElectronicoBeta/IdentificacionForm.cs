@@ -42,6 +42,7 @@ namespace VotoElectronicoBeta
             Close();
 
             var vf = new VotacionForm();
+            vf.VotanteActual = votante;
             vf.Show();
            
         }

@@ -45,5 +45,15 @@ namespace VotoElectronicoBeta
         {
             Close();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var rm = new ResultadoMapper();
+            var resultado = rm.ObtenerTodas().FirstOrDefault();
+
+            
+            MessageBox.Show(resultado.Candidato.ToString() + " " + resultado.CantidadDeVotos.ToString());
+
+        }
     }
 }

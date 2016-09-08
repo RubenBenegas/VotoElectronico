@@ -32,16 +32,17 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.agregarCandidatoButton = new System.Windows.Forms.Button();
-            this.jornadaElectoralBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.salirButton = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.jornadaElectoralBindingSource)).BeginInit();
+            this.jornadaElectoralBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button3 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.jornadaElectoralBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -73,10 +74,6 @@
             this.agregarCandidatoButton.Text = "Altas, bajas y modificaciones de candidatos";
             this.agregarCandidatoButton.UseVisualStyleBackColor = true;
             this.agregarCandidatoButton.Click += new System.EventHandler(this.agregarCandidatoButton_Click);
-            // 
-            // jornadaElectoralBindingSource
-            // 
-            this.jornadaElectoralBindingSource.DataSource = typeof(Entidades.JornadaElectoral);
             // 
             // groupBox1
             // 
@@ -126,11 +123,26 @@
             this.label1.Text = "BIENVENIDO A VOTOELECTRONICO!";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // jornadaElectoralBindingSource
+            // 
+            this.jornadaElectoralBindingSource.DataSource = typeof(Entidades.JornadaElectoral);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(264, 323);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 21;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(461, 305);
+            this.ClientSize = new System.Drawing.Size(461, 398);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -138,10 +150,10 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
-            ((System.ComponentModel.ISupportInitialize)(this.jornadaElectoralBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.jornadaElectoralBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -157,5 +169,6 @@
         private System.Windows.Forms.Button salirButton;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button3;
     }
 }

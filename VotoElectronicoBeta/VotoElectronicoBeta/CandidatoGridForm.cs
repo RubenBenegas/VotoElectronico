@@ -46,11 +46,15 @@ namespace VotoElectronicoBeta
             var cf = new CandidatoForm();
             cf.candidatoBindingSource.DataSource = candidatoBindingSource.Current; // El current nos da el objeto que esta seleccionado
             cf.ShowDialog();
+
+            candidatoDataGridView.Refresh();
         }
 
         private void salirButton_Click(object sender, EventArgs e)
         {
             Close();
         }
+
+        
     }
 }

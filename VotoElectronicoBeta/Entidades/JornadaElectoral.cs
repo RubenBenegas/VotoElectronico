@@ -19,13 +19,9 @@ namespace Entidades
 
         public string Organizador { get; set; }
 
-        public List<Candidato> ListaCandidatos { get; set; }
-
         public List<Votante> VotantesQueVotaron { get; private set; }
 
-        public List<Voto> Votos { get; set; }
-
-        
+                
 
     }
 }

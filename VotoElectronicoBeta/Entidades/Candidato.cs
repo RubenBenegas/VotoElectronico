@@ -16,6 +16,5 @@ namespace Entidades
 
         public string Slogan { get; set; }
 
-        public int NumeroDeVotos { get; set; }
     }
 }

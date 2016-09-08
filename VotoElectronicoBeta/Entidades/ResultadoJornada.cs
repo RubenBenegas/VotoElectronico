@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-   public class Voto: EntidadBase
+    public class ResultadoJornada: EntidadBase
     {
+        public Candidato Candidato { get; set; }
 
-        public string Mesa { get; set; }
-            
-        public Candidato RegistroVoto { get; set; }
-
+        public int CantidadDeVotos { get; set; }
     }
 }

@@ -3,32 +3,44 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
 using Entidades;
 
 namespace Reglas
 {
     public class JornadaRule
     {
-        
+        private List<JornadaElectoral> listaJornadas;
         private List<Candidato> listaCandidatos;
         private List<Votante> listaVotantes;
 
         public JornadaRule()
         {
-            
+            listaJornadas = new List<JornadaElectoral>();
             listaCandidatos = new List<Candidato>();
             listaVotantes = new List<Votante>();
         }
 
+        public void AgregarJornada(JornadaElectoral jornadaNueva)
+        {
+            listaJornadas.Add(jornadaNueva);
 
-        public void AgregarCandidato(Candidato candidato)
+          
+            var jm = new JornadaMapper();
+            jm.Grabar(jornadaNueva);
+
+        }
+
+        public void AgregarCandidato(Candidato candidatoNuevo)
         {
             var obt = new CandidatoMapper();
             var candidatos = obt.ObtenerTodas();
-            listaCandidatos.Add(candidato);          
+            listaCandidatos.Add(candidatoNuevo);
+            
+           
 
             var grab = new CandidatoMapper();
-            grab.Grabar(candidato);
+            grab.Grabar(candidatoNuevo);
         }
 
         public List<Votante> CargarVotantes(List<Votante> listaVotantes)
@@ -53,6 +65,8 @@ namespace Reglas
 
                 g.Grabar(listaVotantes);
             }
+
+            
             return listaVotantes;
 
         }
@@ -63,37 +77,63 @@ namespace Reglas
             var cv = new VotanteMapper();
             var votante = cv.ObtenerPorDocumento(numeroDocumento);
 
+            
             return votante;
+            
+                     
+        }
 
+        public void Votar(Candidato candidatoVoto, string mesa, Votante votanteQueVoto, JornadaElectoral jornada)
+        {
+            var nuevoVoto = new Voto();
+            nuevoVoto.RegistroVoto = candidatoVoto;
+            nuevoVoto.Mesa = mesa;
+            //instanciar mapper de voto y grabar
+
+            var vm = new VotoMapper();
+            vm.Grabar(nuevoVoto);
+
+            //jornada.VotantesQueVotaron.Add(votanteQueVoto);
+
+        }
+
+
+        public List<ResultadoJornada> ObtenerResultado(Candidato candidato)
+        {
+
+            var resultado = new List<ResultadoJornada>();
+
+            var vm = new VotoMapper();
+            var votos = (List<Voto>)vm.ObtenerTodas();
+
+            foreach (var voto in votos)
+            {
+                var rp = new ResultadoJornada();
+
+                if (rp.Candidato.Equals(candidato))
+                {
+                    rp.Candidato = candidato;
+                    
+
+                    foreach (var candidatoR in votos)
+                    {
+                        rp.CantidadDeVotos = rp.CantidadDeVotos++;
+                        
+                    }
+
+                    resultado.Add(rp);
+                }               
+            }
           
-        }
 
-        public void Votar(Candidato candidatoVoto)
-        {
-            candidatoVoto.NumeroDeVotos = candidatoVoto.NumeroDeVotos + 1;
-        }
+            var rm = new ResultadoMapper();
+            rm.Grabar(resultado);
 
-        public void ImprimirTicketDeVoto()
-        {
+            return resultado;
+
 
         }
 
-        //Arreglar
-        public IEnumerable<int> ObtenerCandidatosPorVotos(int numeroVotos)
-        {
-
-            var candidatosOrden =
-                                    from candidato in listaCandidatos
-                                    where candidato.NumeroDeVotos.Equals(numeroVotos)
-                                    orderby candidato.NumeroDeVotos descending
-                                    select candidato.NumeroDeVotos;
-
-
-           
-
-            return candidatosOrden;
-        }
-        
     }
 }
 
