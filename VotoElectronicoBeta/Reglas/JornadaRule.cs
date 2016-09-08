@@ -98,40 +98,43 @@ namespace Reglas
         }
 
 
-        public List<ResultadoJornada> ObtenerResultado(Candidato candidato)
+        public List<ResultadoJornada> ObtenerResultado()
         {
 
             var resultado = new List<ResultadoJornada>();
+            var resultadoFinal = new List<ResultadoJornada>();
 
             var vm = new VotoMapper();
             var votos = (List<Voto>)vm.ObtenerTodas();
 
+            
             foreach (var voto in votos)
             {
-                var rp = new ResultadoJornada();
-
-                if (rp.Candidato.Equals(candidato))
+             
+                if (voto.RegistroVoto == voto.RegistroVoto)
                 {
-                    rp.Candidato = candidato;
-                    
 
-                    foreach (var candidatoR in votos)
+                    var contadorVotos = 0;
+                    contadorVotos++;
+
+                    var resJor = new ResultadoJornada
                     {
-                        rp.CantidadDeVotos = rp.CantidadDeVotos++;
-                        
-                    }
+                        Candidato = voto.RegistroVoto,
+                        CantidadDeVotos = contadorVotos
+                    };
 
-                    resultado.Add(rp);
-                }               
-            }
-          
+                    resultado.Add(resJor); //Hasta aca me devuelve Juan 1, Pedro 1,  Juan 1,  Pedro 1, Pedro 1
+
+                    
+                    
+                }
+                 
+          }
 
             var rm = new ResultadoMapper();
             rm.Grabar(resultado);
 
             return resultado;
-
-
         }
 
     }
@@ -139,3 +142,25 @@ namespace Reglas
 
 
 
+ 
+//            foreach (var voto in votos)
+//            {
+             
+//                if (voto.RegistroVoto == voto.RegistroVoto)
+//                {
+
+//                    var contadorVotos = 0;
+//contadorVotos++;
+
+//                    var resJor = new ResultadoJornada
+//                    {
+//                        Candidato = voto.RegistroVoto,
+//                        CantidadDeVotos = contadorVotos
+//                    };
+
+//resultado.Add(resJor);
+         
+                    
+//                }
+                 
+//          }

@@ -39,9 +39,7 @@ namespace VotoElectronicoBeta
             var jr = new JornadaRule();
             jr.Votar(candidato, "001", VotanteActual, null);
 
-            var jr2 = new JornadaRule();
-            jr2.ObtenerResultado(candidato);
-
+            
             MessageBox.Show("Su voto fue registrado con exito.");
 
             ImprimirTicket();

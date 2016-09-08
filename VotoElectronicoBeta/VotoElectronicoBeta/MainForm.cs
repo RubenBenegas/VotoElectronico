@@ -48,11 +48,9 @@ namespace VotoElectronicoBeta
 
         private void button3_Click(object sender, EventArgs e)
         {
-            var rm = new ResultadoMapper();
-            var resultado = rm.ObtenerTodas().FirstOrDefault();
+            var jr2 = new JornadaRule();
+            jr2.ObtenerResultado(); 
 
-            
-            MessageBox.Show(resultado.Candidato.ToString() + " " + resultado.CantidadDeVotos.ToString());
 
         }
     }
