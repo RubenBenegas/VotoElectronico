@@ -11,5 +11,9 @@ namespace Entidades
         public Candidato Candidato { get; set; }
 
         public int CantidadDeVotos { get; set; }
+
+
     }
+
+    
 }

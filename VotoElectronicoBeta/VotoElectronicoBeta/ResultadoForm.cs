@@ -21,9 +21,15 @@ namespace VotoElectronicoBeta
 
         private void ResultadoForm_Load(object sender, EventArgs e)
         {
+
+            var res= new JornadaRule();
+            res.ObtenerResultado();
+
             
-            var rm = new ResultadoMapper();
-            resultadoJornadaBindingSource.DataSource = rm.ObtenerTodas();
+
+            resultadoJornadaBindingSource.DataSource = res.ObtenerResultado(); 
         }
+
+       
     }
 }

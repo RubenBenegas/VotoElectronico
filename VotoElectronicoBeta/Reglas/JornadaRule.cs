@@ -161,12 +161,12 @@ namespace Reglas
                     r.Candidato = candidatoVotado;
                     r.CantidadDeVotos = 1;
 
+                    
+
                     resultado.Add(r);
                 }
             }
 
-            //var rm = new ResultadoMapper();
-            //rm.Grabar(resultado);
 
             return resultado;
 
@@ -175,28 +175,3 @@ namespace Reglas
 
     }
 }
-
-
-
- 
-//            foreach (var voto in votos)
-//            {
-             
-//                if (voto.RegistroVoto == voto.RegistroVoto)
-//                {
-
-//                    var contadorVotos = 0;
-//contadorVotos++;
-
-//                    var resJor = new ResultadoJornada
-//                    {
-//                        Candidato = voto.RegistroVoto,
-//                        CantidadDeVotos = contadorVotos
-//                    };
-
-//resultado.Add(resJor);
-         
-                    
-//                }
-                 
-//          }

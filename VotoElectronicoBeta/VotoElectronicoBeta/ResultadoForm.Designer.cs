@@ -44,9 +44,9 @@
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.resultadoJornadaBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.resultadoJornadaDataGridView = new System.Windows.Forms.DataGridView();
-            this.resultadoJornadaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.resultadoJornadaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.resultadoJornadaBindingNavigator)).BeginInit();
             this.resultadoJornadaBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.resultadoJornadaDataGridView)).BeginInit();
@@ -79,7 +79,7 @@
             this.resultadoJornadaBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.resultadoJornadaBindingNavigator.Name = "resultadoJornadaBindingNavigator";
             this.resultadoJornadaBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.resultadoJornadaBindingNavigator.Size = new System.Drawing.Size(427, 25);
+            this.resultadoJornadaBindingNavigator.Size = new System.Drawing.Size(526, 25);
             this.resultadoJornadaBindingNavigator.TabIndex = 0;
             this.resultadoJornadaBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -193,10 +193,6 @@
             this.resultadoJornadaDataGridView.Size = new System.Drawing.Size(295, 220);
             this.resultadoJornadaDataGridView.TabIndex = 1;
             // 
-            // resultadoJornadaBindingSource
-            // 
-            this.resultadoJornadaBindingSource.DataSource = typeof(Entidades.ResultadoJornada);
-            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "Candidato";
@@ -212,11 +208,15 @@
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
+            // resultadoJornadaBindingSource
+            // 
+            this.resultadoJornadaBindingSource.DataSource = typeof(Entidades.ResultadoJornada);
+            // 
             // ResultadoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(427, 341);
+            this.ClientSize = new System.Drawing.Size(526, 341);
             this.Controls.Add(this.resultadoJornadaDataGridView);
             this.Controls.Add(this.resultadoJornadaBindingNavigator);
             this.Name = "ResultadoForm";
