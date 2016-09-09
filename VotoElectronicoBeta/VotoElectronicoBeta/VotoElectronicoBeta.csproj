@@ -79,6 +79,12 @@
     <Compile Include="JornadaForm.Designer.cs">
       <DependentUpon>JornadaForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="JornadaGridForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JornadaGridForm.Designer.cs">
+      <DependentUpon>JornadaGridForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +125,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="JornadaForm.resx">
       <DependentUpon>JornadaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JornadaGridForm.resx">
+      <DependentUpon>JornadaGridForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

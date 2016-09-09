@@ -21,8 +21,8 @@ namespace VotoElectronicoBeta
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var jf = new JornadaForm();
-            jf.Show();
+            var jgf = new JornadaGridForm();
+            jgf.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)

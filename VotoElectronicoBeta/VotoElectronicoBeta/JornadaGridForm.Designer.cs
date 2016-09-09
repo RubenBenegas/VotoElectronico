@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(JornadaGridForm));
+            this.jornadaElectoralBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.jornadaElectoralBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.jornadaElectoralBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -44,18 +44,22 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.jornadaElectoralBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.salirButton = new System.Windows.Forms.Button();
             this.jornadaElectoralDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.salirButton = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.jornadaElectoralBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jornadaElectoralBindingNavigator)).BeginInit();
             this.jornadaElectoralBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.jornadaElectoralBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jornadaElectoralDataGridView)).BeginInit();
             this.SuspendLayout();
+            // 
+            // jornadaElectoralBindingSource
+            // 
+            this.jornadaElectoralBindingSource.DataSource = typeof(Entidades.JornadaElectoral);
             // 
             // jornadaElectoralBindingNavigator
             // 
@@ -83,7 +87,7 @@
             this.jornadaElectoralBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.jornadaElectoralBindingNavigator.Name = "jornadaElectoralBindingNavigator";
             this.jornadaElectoralBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.jornadaElectoralBindingNavigator.Size = new System.Drawing.Size(644, 25);
+            this.jornadaElectoralBindingNavigator.Size = new System.Drawing.Size(463, 25);
             this.jornadaElectoralBindingNavigator.TabIndex = 0;
             this.jornadaElectoralBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -95,10 +99,6 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
-            // 
-            // jornadaElectoralBindingSource
-            // 
-            this.jornadaElectoralBindingSource.DataSource = typeof(Entidades.JornadaElectoral);
             // 
             // bindingNavigatorCountItem
             // 
@@ -185,6 +185,16 @@
             this.jornadaElectoralBindingNavigatorSaveItem.Text = "Guardar datos";
             this.jornadaElectoralBindingNavigatorSaveItem.Click += new System.EventHandler(this.jornadaElectoralBindingNavigatorSaveItem_Click);
             // 
+            // salirButton
+            // 
+            this.salirButton.Location = new System.Drawing.Point(326, 299);
+            this.salirButton.Name = "salirButton";
+            this.salirButton.Size = new System.Drawing.Size(75, 23);
+            this.salirButton.TabIndex = 2;
+            this.salirButton.Text = "Salir";
+            this.salirButton.UseVisualStyleBackColor = true;
+            this.salirButton.Click += new System.EventHandler(this.salirButton_Click_1);
+            // 
             // jornadaElectoralDataGridView
             // 
             this.jornadaElectoralDataGridView.AutoGenerateColumns = false;
@@ -196,11 +206,10 @@
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
             this.jornadaElectoralDataGridView.DataSource = this.jornadaElectoralBindingSource;
-            this.jornadaElectoralDataGridView.Location = new System.Drawing.Point(28, 53);
+            this.jornadaElectoralDataGridView.Location = new System.Drawing.Point(36, 45);
             this.jornadaElectoralDataGridView.Name = "jornadaElectoralDataGridView";
-            this.jornadaElectoralDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.jornadaElectoralDataGridView.Size = new System.Drawing.Size(545, 310);
-            this.jornadaElectoralDataGridView.TabIndex = 1;
+            this.jornadaElectoralDataGridView.Size = new System.Drawing.Size(300, 220);
+            this.jornadaElectoralDataGridView.TabIndex = 2;
             this.jornadaElectoralDataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.jornadaElectoralDataGridView_CellDoubleClick);
             // 
             // dataGridViewTextBoxColumn1
@@ -233,31 +242,21 @@
             this.dataGridViewTextBoxColumn5.HeaderText = "Organizador";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
-            // salirButton
-            // 
-            this.salirButton.Location = new System.Drawing.Point(473, 379);
-            this.salirButton.Name = "salirButton";
-            this.salirButton.Size = new System.Drawing.Size(88, 29);
-            this.salirButton.TabIndex = 22;
-            this.salirButton.Text = "Salir";
-            this.salirButton.UseVisualStyleBackColor = true;
-            this.salirButton.Click += new System.EventHandler(this.salirButton_Click);
-            // 
             // JornadaGridForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(644, 420);
-            this.Controls.Add(this.salirButton);
+            this.ClientSize = new System.Drawing.Size(463, 374);
             this.Controls.Add(this.jornadaElectoralDataGridView);
+            this.Controls.Add(this.salirButton);
             this.Controls.Add(this.jornadaElectoralBindingNavigator);
             this.Name = "JornadaGridForm";
             this.Text = "JornadaGridForm";
             this.Load += new System.EventHandler(this.JornadaGridForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.jornadaElectoralBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.jornadaElectoralBindingNavigator)).EndInit();
             this.jornadaElectoralBindingNavigator.ResumeLayout(false);
             this.jornadaElectoralBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.jornadaElectoralBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.jornadaElectoralDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -280,12 +279,12 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton jornadaElectoralBindingNavigatorSaveItem;
+        private System.Windows.Forms.Button salirButton;
         private System.Windows.Forms.DataGridView jornadaElectoralDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.Button salirButton;
     }
 }
