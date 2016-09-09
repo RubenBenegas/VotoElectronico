@@ -141,12 +141,7 @@ namespace Reglas
             foreach (var voto in votos)
             {
                 
-                if ()
-                {
-                    
-                    
-                }
-
+                
                 
                
             }
@@ -158,12 +153,7 @@ namespace Reglas
 
 
         }
-
-        //    var rm = new ResultadoMapper();
-        //    rm.Grabar(resultado);
-
-        //    return resultado;
-        //}
+        
 
     }
 }
