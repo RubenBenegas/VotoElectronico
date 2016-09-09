@@ -31,20 +31,12 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label contraseñaLabel;
             this.contraseñaTextBox = new System.Windows.Forms.TextBox();
+            this.administradorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.aceptarButton = new System.Windows.Forms.Button();
             this.cancelarButton = new System.Windows.Forms.Button();
-            this.administradorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             contraseñaLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.administradorBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // contraseñaTextBox
-            // 
-            this.contraseñaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.administradorBindingSource, "Contraseña", true));
-            this.contraseñaTextBox.Location = new System.Drawing.Point(82, 64);
-            this.contraseñaTextBox.Name = "contraseñaTextBox";
-            this.contraseñaTextBox.Size = new System.Drawing.Size(100, 20);
-            this.contraseñaTextBox.TabIndex = 2;
             // 
             // contraseñaLabel
             // 
@@ -55,9 +47,23 @@
             contraseñaLabel.TabIndex = 1;
             contraseñaLabel.Text = "Contraseña:";
             // 
+            // contraseñaTextBox
+            // 
+            this.contraseñaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.administradorBindingSource, "Contraseña", true));
+            this.contraseñaTextBox.Location = new System.Drawing.Point(82, 64);
+            this.contraseñaTextBox.MaxLength = 8;
+            this.contraseñaTextBox.Name = "contraseñaTextBox";
+            this.contraseñaTextBox.PasswordChar = '•';
+            this.contraseñaTextBox.Size = new System.Drawing.Size(83, 20);
+            this.contraseñaTextBox.TabIndex = 2;
+            // 
+            // administradorBindingSource
+            // 
+            this.administradorBindingSource.DataSource = typeof(Entidades.Administrador);
+            // 
             // aceptarButton
             // 
-            this.aceptarButton.Location = new System.Drawing.Point(240, 54);
+            this.aceptarButton.Location = new System.Drawing.Point(171, 62);
             this.aceptarButton.Name = "aceptarButton";
             this.aceptarButton.Size = new System.Drawing.Size(75, 23);
             this.aceptarButton.TabIndex = 3;
@@ -67,7 +73,7 @@
             // 
             // cancelarButton
             // 
-            this.cancelarButton.Location = new System.Drawing.Point(240, 99);
+            this.cancelarButton.Location = new System.Drawing.Point(171, 91);
             this.cancelarButton.Name = "cancelarButton";
             this.cancelarButton.Size = new System.Drawing.Size(75, 23);
             this.cancelarButton.TabIndex = 4;
@@ -75,15 +81,11 @@
             this.cancelarButton.UseVisualStyleBackColor = true;
             this.cancelarButton.Click += new System.EventHandler(this.cancelarButton_Click);
             // 
-            // administradorBindingSource
-            // 
-            this.administradorBindingSource.DataSource = typeof(Entidades.Administrador);
-            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(432, 146);
+            this.ClientSize = new System.Drawing.Size(269, 146);
             this.Controls.Add(this.cancelarButton);
             this.Controls.Add(this.aceptarButton);
             this.Controls.Add(contraseñaLabel);

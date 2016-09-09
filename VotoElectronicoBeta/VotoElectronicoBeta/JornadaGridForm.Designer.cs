@@ -87,7 +87,7 @@
             this.jornadaElectoralBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.jornadaElectoralBindingNavigator.Name = "jornadaElectoralBindingNavigator";
             this.jornadaElectoralBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.jornadaElectoralBindingNavigator.Size = new System.Drawing.Size(463, 25);
+            this.jornadaElectoralBindingNavigator.Size = new System.Drawing.Size(368, 25);
             this.jornadaElectoralBindingNavigator.TabIndex = 0;
             this.jornadaElectoralBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -187,7 +187,7 @@
             // 
             // salirButton
             // 
-            this.salirButton.Location = new System.Drawing.Point(326, 299);
+            this.salirButton.Location = new System.Drawing.Point(261, 293);
             this.salirButton.Name = "salirButton";
             this.salirButton.Size = new System.Drawing.Size(75, 23);
             this.salirButton.TabIndex = 2;
@@ -246,11 +246,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(463, 374);
+            this.ClientSize = new System.Drawing.Size(368, 374);
             this.Controls.Add(this.jornadaElectoralDataGridView);
             this.Controls.Add(this.salirButton);
             this.Controls.Add(this.jornadaElectoralBindingNavigator);
             this.Name = "JornadaGridForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "JornadaGridForm";
             this.Load += new System.EventHandler(this.JornadaGridForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.jornadaElectoralBindingSource)).EndInit();

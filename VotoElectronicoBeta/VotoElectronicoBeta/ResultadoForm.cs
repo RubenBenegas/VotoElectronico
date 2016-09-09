@@ -30,6 +30,9 @@ namespace VotoElectronicoBeta
             resultadoJornadaBindingSource.DataSource = res.ObtenerResultado(); 
         }
 
-       
+        private void salirButton_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
