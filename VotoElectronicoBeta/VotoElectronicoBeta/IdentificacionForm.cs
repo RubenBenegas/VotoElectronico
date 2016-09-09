@@ -24,8 +24,7 @@ namespace VotoElectronicoBeta
         }
 
         private void aceptarButton_Click(object sender, EventArgs e)
-        {
-                                    
+        {                        
             var numeroDocumentoABuscar = documentoTextBox.Text;
 
             var cv = new JornadaRule();
@@ -43,6 +42,7 @@ namespace VotoElectronicoBeta
 
             var vf = new VotacionForm();
             vf.VotanteActual = votante;
+            
             vf.Show();
            
         }

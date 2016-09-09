@@ -132,6 +132,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ResultadoForm.resx">
+      <DependentUpon>ResultadoForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TicketForm.resx">
       <DependentUpon>TicketForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -141,6 +144,7 @@
     <None Include="Properties\DataSources\Entidades.Administrador.datasource" />
     <None Include="Properties\DataSources\Entidades.Candidato.datasource" />
     <None Include="Properties\DataSources\Entidades.JornadaElectoral.datasource" />
+    <None Include="Properties\DataSources\Entidades.ResultadoJornada.datasource" />
     <None Include="Properties\DataSources\Entidades.Votante.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

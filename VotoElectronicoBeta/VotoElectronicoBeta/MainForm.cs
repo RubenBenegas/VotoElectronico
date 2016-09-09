@@ -58,5 +58,11 @@ namespace VotoElectronicoBeta
 
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            var res = new JornadaRule();
+            res.ObtenerResultado();
+        }
     }
 }

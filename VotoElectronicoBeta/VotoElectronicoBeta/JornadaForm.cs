@@ -42,7 +42,7 @@ namespace VotoElectronicoBeta
             Close();
 
             var vf = new VotacionForm();
-            vf.JornadaActual = nuevaJornada;
+            
         }
 
         private void Cancelar_Click(object sender, EventArgs e)

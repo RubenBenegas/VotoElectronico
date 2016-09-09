@@ -131,40 +131,39 @@ namespace Reglas
         {
 
             var resultado = new List<ResultadoJornada>();
-            var resultadoFinal = new List<ResultadoJornada>();
+            
 
             var vm = new VotoMapper();
             var votos = (List<Voto>)vm.ObtenerTodas();
 
-            
+ 
+
             foreach (var voto in votos)
             {
-             
-                if (voto.RegistroVoto == voto.RegistroVoto)
+                
+                if ()
                 {
-
-                    var contadorVotos = 0;
-                    contadorVotos++;
-
-                    var resJor = new ResultadoJornada
-                    {
-                        Candidato = voto.RegistroVoto,
-                        CantidadDeVotos = contadorVotos
-                    };
-
-                    resultado.Add(resJor); //Hasta aca me devuelve Juan 1, Pedro 1,  Juan 1,  Pedro 1, Pedro 1
-
                     
                     
                 }
-                 
-          }
+
+                
+               
+            }
 
             var rm = new ResultadoMapper();
             rm.Grabar(resultado);
 
             return resultado;
+
+
         }
+
+        //    var rm = new ResultadoMapper();
+        //    rm.Grabar(resultado);
+
+        //    return resultado;
+        //}
 
     }
 }

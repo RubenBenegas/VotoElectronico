@@ -44,16 +44,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdministradorMapper.cs" />
-    <Compile Include="BaseMapper.cs" />
-    <Compile Include="CandidatoMapper.cs" />
-    <Compile Include="EntityPersistor.cs" />
-    <Compile Include="JornadaMapper.cs" />
+    <Compile Include="Mapper\AdministradorMapper.cs" />
+    <Compile Include="Mapper\BaseMapper.cs" />
+    <Compile Include="Mapper\CandidatoMapper.cs" />
+    <Compile Include="Mapper\EntityPersistor.cs" />
+    <Compile Include="Mapper\JornadaMapper.cs" />
     <Compile Include="JornadaRule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ResultadoMapper.cs" />
-    <Compile Include="VotanteMapper.cs" />
-    <Compile Include="VotoMapper.cs" />
+    <Compile Include="Mapper\ResultadoMapper.cs" />
+    <Compile Include="Mapper\VotanteMapper.cs" />
+    <Compile Include="Mapper\VotoMapper.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Entidades\Entidades.csproj">

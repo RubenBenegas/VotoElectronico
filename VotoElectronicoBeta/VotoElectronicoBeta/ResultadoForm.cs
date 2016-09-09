@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entidades;
+using Reglas;
 
 namespace VotoElectronicoBeta
 {
@@ -15,6 +17,13 @@ namespace VotoElectronicoBeta
         public ResultadoForm()
         {
             InitializeComponent();
+        }
+
+        private void ResultadoForm_Load(object sender, EventArgs e)
+        {
+            
+            var rm = new ResultadoMapper();
+            resultadoJornadaBindingSource.DataSource = rm.ObtenerTodas();
         }
     }
 }
