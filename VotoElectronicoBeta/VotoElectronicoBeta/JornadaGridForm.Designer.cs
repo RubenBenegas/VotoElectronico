@@ -246,7 +246,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(368, 374);
+            this.ClientSize = new System.Drawing.Size(368, 338);
             this.Controls.Add(this.jornadaElectoralDataGridView);
             this.Controls.Add(this.salirButton);
             this.Controls.Add(this.jornadaElectoralBindingNavigator);

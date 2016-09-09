@@ -32,6 +32,15 @@ namespace Reglas
 
         }
 
+        public JornadaElectoral ObtenerJornada(string nombre)
+        {
+            var oj = new JornadaMapper();
+            var jornada = oj.ObtenerPorNombre(nombre);
+
+
+
+            return jornada;
+        }
         public void AgregarCandidato(Candidato candidatoNuevo)
         {
             var obt = new CandidatoMapper();
@@ -43,6 +52,8 @@ namespace Reglas
             var grab = new CandidatoMapper();
             grab.Grabar(candidatoNuevo);
         }
+
+     
 
         public List<Administrador> CargarAdminins (List<Administrador> listaAdmin)
         {

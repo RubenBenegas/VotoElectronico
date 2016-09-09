@@ -10,6 +10,19 @@ namespace Reglas
     public class JornadaMapper : BaseMapper<JornadaElectoral>
     {
 
+        public JornadaElectoral ObtenerPorNombre(string nombre)
+        {
+            foreach (var jornada in ObtenerTodas())
+            {
+                if (jornada.Nombre == nombre)
+                {
+                    return jornada;
+                }
+
+            }
+
+            return null;
+        }
     }
 
 }

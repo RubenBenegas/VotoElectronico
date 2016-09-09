@@ -30,15 +30,20 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label documentoLabel;
+            System.Windows.Forms.Label nombreLabel;
             this.documentoTextBox = new System.Windows.Forms.TextBox();
             this.votanteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.aceptarButton = new System.Windows.Forms.Button();
             this.cancelarButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.jornadaElectoralBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nombreTextBox = new System.Windows.Forms.TextBox();
             documentoLabel = new System.Windows.Forms.Label();
+            nombreLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.votanteBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.jornadaElectoralBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // documentoLabel
@@ -101,17 +106,40 @@
             this.groupBox1.Controls.Add(this.documentoTextBox);
             this.groupBox1.Controls.Add(this.cancelarButton);
             this.groupBox1.Controls.Add(this.aceptarButton);
-            this.groupBox1.Location = new System.Drawing.Point(12, 54);
+            this.groupBox1.Location = new System.Drawing.Point(12, 117);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(299, 100);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             // 
+            // jornadaElectoralBindingSource
+            // 
+            this.jornadaElectoralBindingSource.DataSource = typeof(Entidades.JornadaElectoral);
+            // 
+            // nombreLabel
+            // 
+            nombreLabel.AutoSize = true;
+            nombreLabel.Location = new System.Drawing.Point(19, 74);
+            nombreLabel.Name = "nombreLabel";
+            nombreLabel.Size = new System.Drawing.Size(111, 13);
+            nombreLabel.TabIndex = 21;
+            nombreLabel.Text = "Nombre de la jornada:";
+            // 
+            // nombreTextBox
+            // 
+            this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.jornadaElectoralBindingSource, "Nombre", true));
+            this.nombreTextBox.Location = new System.Drawing.Point(141, 71);
+            this.nombreTextBox.Name = "nombreTextBox";
+            this.nombreTextBox.Size = new System.Drawing.Size(100, 20);
+            this.nombreTextBox.TabIndex = 22;
+            // 
             // IdentificacionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(323, 163);
+            this.ClientSize = new System.Drawing.Size(338, 245);
+            this.Controls.Add(nombreLabel);
+            this.Controls.Add(this.nombreTextBox);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Name = "IdentificacionForm";
@@ -120,7 +148,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.votanteBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.jornadaElectoralBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -132,5 +162,7 @@
         private System.Windows.Forms.Button cancelarButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.BindingSource jornadaElectoralBindingSource;
+        private System.Windows.Forms.TextBox nombreTextBox;
     }
 }

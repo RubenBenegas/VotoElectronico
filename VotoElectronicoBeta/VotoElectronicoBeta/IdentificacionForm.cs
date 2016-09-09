@@ -24,7 +24,18 @@ namespace VotoElectronicoBeta
         }
 
         private void aceptarButton_Click(object sender, EventArgs e)
-        {                        
+        {
+
+            var nombreABuscar = nombreTextBox.Text;
+
+            var oj = new JornadaRule();
+            var jornada = oj.ObtenerJornada(nombreABuscar);
+
+            if (jornada == null)
+            {
+                MessageBox.Show("La jornada con ese nombre no existe.");
+            }
+
             var numeroDocumentoABuscar = documentoTextBox.Text;
 
             var cv = new JornadaRule();
@@ -42,7 +53,7 @@ namespace VotoElectronicoBeta
 
             var vf = new VotacionForm();
             vf.VotanteActual = votante;
-            
+            vf.JornadaActual = jornada;
             vf.Show();
            
         }
