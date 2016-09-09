@@ -48,6 +48,11 @@ namespace VotoElectronicoBeta
 
         private void button3_Click(object sender, EventArgs e)
         {
+
+            var listaAdmin = new List<Administrador>();
+            var ca = new JornadaRule();
+            ca.CargarAdminins(listaAdmin);
+
             var af = new AdminForm();
             af.Show();
 

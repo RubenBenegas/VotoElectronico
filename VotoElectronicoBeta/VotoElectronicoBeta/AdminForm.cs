@@ -25,7 +25,7 @@ namespace VotoElectronicoBeta
             var contraseñaABuscar = contraseñaTextBox.Text;
 
             var ca = new JornadaRule();
-            var admin = ca.ComprobarVotante(contraseñaABuscar);
+            var admin = ca.ComprobarAdmin(contraseñaABuscar);
 
             if (admin == null)
             {
@@ -36,6 +36,9 @@ namespace VotoElectronicoBeta
             }
 
             Close();
+
+            var rf = new ResultadoForm();
+            rf.Show();
         }
 
         private void cancelarButton_Click(object sender, EventArgs e)
