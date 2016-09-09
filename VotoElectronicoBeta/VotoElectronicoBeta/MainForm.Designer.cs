@@ -96,7 +96,7 @@
             // 
             // salirButton
             // 
-            this.salirButton.Location = new System.Drawing.Point(264, 315);
+            this.salirButton.Location = new System.Drawing.Point(264, 286);
             this.salirButton.Name = "salirButton";
             this.salirButton.Size = new System.Drawing.Size(152, 54);
             this.salirButton.TabIndex = 10;
@@ -141,7 +141,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(461, 398);
+            this.ClientSize = new System.Drawing.Size(461, 355);
             this.Controls.Add(this.salirButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox3);

@@ -67,6 +67,7 @@
             this.jornadaElectoralBindingNavigator.BindingSource = this.jornadaElectoralBindingSource;
             this.jornadaElectoralBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.jornadaElectoralBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.jornadaElectoralBindingNavigator.Dock = System.Windows.Forms.DockStyle.None;
             this.jornadaElectoralBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
@@ -80,14 +81,14 @@
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
             this.jornadaElectoralBindingNavigatorSaveItem});
-            this.jornadaElectoralBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.jornadaElectoralBindingNavigator.Location = new System.Drawing.Point(9, 20);
             this.jornadaElectoralBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.jornadaElectoralBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.jornadaElectoralBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
             this.jornadaElectoralBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.jornadaElectoralBindingNavigator.Name = "jornadaElectoralBindingNavigator";
             this.jornadaElectoralBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.jornadaElectoralBindingNavigator.Size = new System.Drawing.Size(368, 25);
+            this.jornadaElectoralBindingNavigator.Size = new System.Drawing.Size(280, 25);
             this.jornadaElectoralBindingNavigator.TabIndex = 0;
             this.jornadaElectoralBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -187,7 +188,7 @@
             // 
             // salirButton
             // 
-            this.salirButton.Location = new System.Drawing.Point(261, 293);
+            this.salirButton.Location = new System.Drawing.Point(237, 274);
             this.salirButton.Name = "salirButton";
             this.salirButton.Size = new System.Drawing.Size(75, 23);
             this.salirButton.TabIndex = 2;
@@ -206,7 +207,7 @@
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
             this.jornadaElectoralDataGridView.DataSource = this.jornadaElectoralBindingSource;
-            this.jornadaElectoralDataGridView.Location = new System.Drawing.Point(36, 45);
+            this.jornadaElectoralDataGridView.Location = new System.Drawing.Point(12, 48);
             this.jornadaElectoralDataGridView.Name = "jornadaElectoralDataGridView";
             this.jornadaElectoralDataGridView.Size = new System.Drawing.Size(300, 220);
             this.jornadaElectoralDataGridView.TabIndex = 2;
@@ -246,7 +247,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(368, 338);
+            this.ClientSize = new System.Drawing.Size(323, 305);
             this.Controls.Add(this.jornadaElectoralDataGridView);
             this.Controls.Add(this.salirButton);
             this.Controls.Add(this.jornadaElectoralBindingNavigator);

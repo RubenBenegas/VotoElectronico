@@ -72,7 +72,7 @@
             // 
             // aceptarButton
             // 
-            this.aceptarButton.Location = new System.Drawing.Point(208, 27);
+            this.aceptarButton.Location = new System.Drawing.Point(184, 27);
             this.aceptarButton.Name = "aceptarButton";
             this.aceptarButton.Size = new System.Drawing.Size(75, 23);
             this.aceptarButton.TabIndex = 5;
@@ -82,7 +82,7 @@
             // 
             // cancelarButton
             // 
-            this.cancelarButton.Location = new System.Drawing.Point(208, 56);
+            this.cancelarButton.Location = new System.Drawing.Point(184, 56);
             this.cancelarButton.Name = "cancelarButton";
             this.cancelarButton.Size = new System.Drawing.Size(75, 23);
             this.cancelarButton.TabIndex = 6;
@@ -106,9 +106,9 @@
             this.groupBox1.Controls.Add(this.documentoTextBox);
             this.groupBox1.Controls.Add(this.cancelarButton);
             this.groupBox1.Controls.Add(this.aceptarButton);
-            this.groupBox1.Location = new System.Drawing.Point(12, 117);
+            this.groupBox1.Location = new System.Drawing.Point(12, 97);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(299, 100);
+            this.groupBox1.Size = new System.Drawing.Size(285, 100);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             // 
@@ -130,14 +130,14 @@
             this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.jornadaElectoralBindingSource, "Nombre", true));
             this.nombreTextBox.Location = new System.Drawing.Point(141, 71);
             this.nombreTextBox.Name = "nombreTextBox";
-            this.nombreTextBox.Size = new System.Drawing.Size(100, 20);
+            this.nombreTextBox.Size = new System.Drawing.Size(156, 20);
             this.nombreTextBox.TabIndex = 22;
             // 
             // IdentificacionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(338, 245);
+            this.ClientSize = new System.Drawing.Size(312, 213);
             this.Controls.Add(nombreLabel);
             this.Controls.Add(this.nombreTextBox);
             this.Controls.Add(this.groupBox1);

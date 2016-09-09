@@ -53,13 +53,58 @@
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
+            // fechaLabel
+            // 
+            fechaLabel.AutoSize = true;
+            fechaLabel.Location = new System.Drawing.Point(24, 58);
+            fechaLabel.Name = "fechaLabel";
+            fechaLabel.Size = new System.Drawing.Size(40, 13);
+            fechaLabel.TabIndex = 7;
+            fechaLabel.Text = "Fecha:";
+            // 
+            // horaComienzoLabel
+            // 
+            horaComienzoLabel.AutoSize = true;
+            horaComienzoLabel.Location = new System.Drawing.Point(24, 84);
+            horaComienzoLabel.Name = "horaComienzoLabel";
+            horaComienzoLabel.Size = new System.Drawing.Size(82, 13);
+            horaComienzoLabel.TabIndex = 9;
+            horaComienzoLabel.Text = "Hora Comienzo:";
+            // 
+            // horaFinLabel
+            // 
+            horaFinLabel.AutoSize = true;
+            horaFinLabel.Location = new System.Drawing.Point(183, 84);
+            horaFinLabel.Name = "horaFinLabel";
+            horaFinLabel.Size = new System.Drawing.Size(50, 13);
+            horaFinLabel.TabIndex = 11;
+            horaFinLabel.Text = "Hora Fin:";
+            // 
+            // nombreLabel
+            // 
+            nombreLabel.AutoSize = true;
+            nombreLabel.Location = new System.Drawing.Point(24, 32);
+            nombreLabel.Name = "nombreLabel";
+            nombreLabel.Size = new System.Drawing.Size(47, 13);
+            nombreLabel.TabIndex = 15;
+            nombreLabel.Text = "Nombre:";
+            // 
+            // organizadorLabel
+            // 
+            organizadorLabel.AutoSize = true;
+            organizadorLabel.Location = new System.Drawing.Point(24, 116);
+            organizadorLabel.Name = "organizadorLabel";
+            organizadorLabel.Size = new System.Drawing.Size(67, 13);
+            organizadorLabel.TabIndex = 17;
+            organizadorLabel.Text = "Organizador:";
+            // 
             // jornadaElectoralBindingSource
             // 
             this.jornadaElectoralBindingSource.DataSource = typeof(Entidades.JornadaElectoral);
             // 
             // aceptarButton
             // 
-            this.aceptarButton.Location = new System.Drawing.Point(153, 172);
+            this.aceptarButton.Location = new System.Drawing.Point(112, 155);
             this.aceptarButton.Name = "aceptarButton";
             this.aceptarButton.Size = new System.Drawing.Size(75, 23);
             this.aceptarButton.TabIndex = 6;
@@ -69,7 +114,7 @@
             // 
             // Cancelar
             // 
-            this.Cancelar.Location = new System.Drawing.Point(249, 172);
+            this.Cancelar.Location = new System.Drawing.Point(208, 155);
             this.Cancelar.Name = "Cancelar";
             this.Cancelar.Size = new System.Drawing.Size(75, 23);
             this.Cancelar.TabIndex = 7;
@@ -80,7 +125,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(56, 9);
+            this.label1.Location = new System.Drawing.Point(34, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(314, 24);
             this.label1.TabIndex = 19;
@@ -101,94 +146,49 @@
             this.groupBox1.Controls.Add(this.organizadorTextBox);
             this.groupBox1.Controls.Add(this.Cancelar);
             this.groupBox1.Controls.Add(this.aceptarButton);
-            this.groupBox1.Location = new System.Drawing.Point(34, 49);
+            this.groupBox1.Location = new System.Drawing.Point(12, 46);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(364, 230);
+            this.groupBox1.Size = new System.Drawing.Size(326, 193);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Jornada";
             // 
-            // fechaLabel
-            // 
-            fechaLabel.AutoSize = true;
-            fechaLabel.Location = new System.Drawing.Point(47, 53);
-            fechaLabel.Name = "fechaLabel";
-            fechaLabel.Size = new System.Drawing.Size(40, 13);
-            fechaLabel.TabIndex = 7;
-            fechaLabel.Text = "Fecha:";
-            // 
             // fechaTextBox
             // 
             this.fechaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.jornadaElectoralBindingSource, "Fecha", true));
-            this.fechaTextBox.Location = new System.Drawing.Point(135, 50);
+            this.fechaTextBox.Location = new System.Drawing.Point(112, 55);
             this.fechaTextBox.Name = "fechaTextBox";
-            this.fechaTextBox.Size = new System.Drawing.Size(100, 20);
+            this.fechaTextBox.Size = new System.Drawing.Size(79, 20);
             this.fechaTextBox.TabIndex = 8;
-            // 
-            // horaComienzoLabel
-            // 
-            horaComienzoLabel.AutoSize = true;
-            horaComienzoLabel.Location = new System.Drawing.Point(47, 79);
-            horaComienzoLabel.Name = "horaComienzoLabel";
-            horaComienzoLabel.Size = new System.Drawing.Size(82, 13);
-            horaComienzoLabel.TabIndex = 9;
-            horaComienzoLabel.Text = "Hora Comienzo:";
             // 
             // horaComienzoTextBox
             // 
             this.horaComienzoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.jornadaElectoralBindingSource, "HoraComienzo", true));
-            this.horaComienzoTextBox.Location = new System.Drawing.Point(135, 76);
+            this.horaComienzoTextBox.Location = new System.Drawing.Point(112, 81);
             this.horaComienzoTextBox.Name = "horaComienzoTextBox";
-            this.horaComienzoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.horaComienzoTextBox.Size = new System.Drawing.Size(41, 20);
             this.horaComienzoTextBox.TabIndex = 10;
-            // 
-            // horaFinLabel
-            // 
-            horaFinLabel.AutoSize = true;
-            horaFinLabel.Location = new System.Drawing.Point(47, 105);
-            horaFinLabel.Name = "horaFinLabel";
-            horaFinLabel.Size = new System.Drawing.Size(50, 13);
-            horaFinLabel.TabIndex = 11;
-            horaFinLabel.Text = "Hora Fin:";
             // 
             // horaFinTextBox
             // 
             this.horaFinTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.jornadaElectoralBindingSource, "HoraFin", true));
-            this.horaFinTextBox.Location = new System.Drawing.Point(135, 102);
+            this.horaFinTextBox.Location = new System.Drawing.Point(239, 81);
             this.horaFinTextBox.Name = "horaFinTextBox";
-            this.horaFinTextBox.Size = new System.Drawing.Size(100, 20);
+            this.horaFinTextBox.Size = new System.Drawing.Size(41, 20);
             this.horaFinTextBox.TabIndex = 12;
-            // 
-            // nombreLabel
-            // 
-            nombreLabel.AutoSize = true;
-            nombreLabel.Location = new System.Drawing.Point(47, 27);
-            nombreLabel.Name = "nombreLabel";
-            nombreLabel.Size = new System.Drawing.Size(47, 13);
-            nombreLabel.TabIndex = 15;
-            nombreLabel.Text = "Nombre:";
             // 
             // nombreTextBox
             // 
             this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.jornadaElectoralBindingSource, "Nombre", true));
-            this.nombreTextBox.Location = new System.Drawing.Point(135, 24);
+            this.nombreTextBox.Location = new System.Drawing.Point(112, 29);
             this.nombreTextBox.Name = "nombreTextBox";
-            this.nombreTextBox.Size = new System.Drawing.Size(100, 20);
+            this.nombreTextBox.Size = new System.Drawing.Size(201, 20);
             this.nombreTextBox.TabIndex = 16;
-            // 
-            // organizadorLabel
-            // 
-            organizadorLabel.AutoSize = true;
-            organizadorLabel.Location = new System.Drawing.Point(47, 131);
-            organizadorLabel.Name = "organizadorLabel";
-            organizadorLabel.Size = new System.Drawing.Size(67, 13);
-            organizadorLabel.TabIndex = 17;
-            organizadorLabel.Text = "Organizador:";
             // 
             // organizadorTextBox
             // 
             this.organizadorTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.jornadaElectoralBindingSource, "Organizador", true));
-            this.organizadorTextBox.Location = new System.Drawing.Point(135, 128);
+            this.organizadorTextBox.Location = new System.Drawing.Point(112, 113);
             this.organizadorTextBox.Name = "organizadorTextBox";
             this.organizadorTextBox.Size = new System.Drawing.Size(100, 20);
             this.organizadorTextBox.TabIndex = 18;
@@ -197,7 +197,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(429, 291);
+            this.ClientSize = new System.Drawing.Size(357, 251);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Name = "JornadaForm";
