@@ -51,10 +51,14 @@ namespace VotoElectronicoBeta
 
             Close();
 
-            var vf = new VotacionForm();
-            vf.VotanteActual = votante;
-            vf.JornadaActual = jornada;
-            vf.Show();
+            if (jornada!= null && votante != null)
+            {
+                var vf = new VotacionForm();
+                vf.VotanteActual = votante;
+                vf.JornadaActual = jornada;
+                vf.Show();
+            }
+            
            
         }
 
