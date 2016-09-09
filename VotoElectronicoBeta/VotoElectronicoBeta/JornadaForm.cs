@@ -30,7 +30,7 @@ namespace VotoElectronicoBeta
             ac.AgregarJornada(nuevaJornada);
 
             var g = new JornadaMapper();
-            g.Grabar(nuevaJornada);
+            g.Grabar(nuevaJornada);       
 
             Close();
 
@@ -49,24 +49,3 @@ namespace VotoElectronicoBeta
         
     }
 }
-
-
-//    var nuevaJornada = new JornadaElectoral
-//    {
-//        Nombre = nombreTextBox.Text,
-//        Fecha = fechaTextBox.Text,
-//        HoraComienzo = horaComienzoTextBox.Text,
-//        HoraFin = horaFinTextBox.Text,
-//        Organizador = organizadorTextBox.Text,
-
-//};
-
-//    var jr = new JornadaRule();
-//    jr.AgregarJornada(nuevaJornada);
-
-//    var g = new JornadaMapper();
-//    g.Grabar(nuevaJornada);
-
-//    Close();
-
-//    var vf = new VotacionForm();

@@ -209,6 +209,7 @@
             this.jornadaElectoralDataGridView.DataSource = this.jornadaElectoralBindingSource;
             this.jornadaElectoralDataGridView.Location = new System.Drawing.Point(12, 48);
             this.jornadaElectoralDataGridView.Name = "jornadaElectoralDataGridView";
+            this.jornadaElectoralDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.jornadaElectoralDataGridView.Size = new System.Drawing.Size(300, 220);
             this.jornadaElectoralDataGridView.TabIndex = 2;
             this.jornadaElectoralDataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.jornadaElectoralDataGridView_CellDoubleClick);

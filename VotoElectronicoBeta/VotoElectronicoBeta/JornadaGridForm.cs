@@ -43,6 +43,8 @@ namespace VotoElectronicoBeta
 
         private void jornadaElectoralDataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+          
+
             var jf = new JornadaForm();
             jf.jornadaElectoralBindingSource.DataSource = jornadaElectoralBindingSource.Current;
             jf.ShowDialog();
