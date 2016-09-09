@@ -16,5 +16,9 @@ namespace Entidades
 
         public string Slogan { get; set; }
 
+        public override string ToString()
+        {
+            return Nombre + " " + Apellido;
+        }
     }
 }
