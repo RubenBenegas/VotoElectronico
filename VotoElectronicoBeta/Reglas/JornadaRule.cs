@@ -115,7 +115,7 @@ namespace Reglas
         public void Votar(Candidato candidatoVoto, string mesa, Votante votanteQueVoto, JornadaElectoral jornada)
         {
             var nuevoVoto = new Voto();
-            nuevoVoto.RegistroVoto = candidatoVoto;
+            nuevoVoto.CandidatoAQuienSeVoto = candidatoVoto;
             nuevoVoto.Mesa = mesa;
             //instanciar mapper de voto y grabar
 
@@ -132,25 +132,43 @@ namespace Reglas
 
             var resultado = new List<ResultadoJornada>();
             
-
             var vm = new VotoMapper();
-            var votos = (List<Voto>)vm.ObtenerTodas();
-
+            var votos = vm.ObtenerTodas().ToList();
  
-
+            // Empezamos a dar vuelta por cada voto..
             foreach (var voto in votos)
             {
-                
-                
-                
-               
+                // Nos guardamos cual es el candidato
+                var candidatoVotado = voto.CandidatoAQuienSeVoto;
+
+                // Damos vuelta por la lista para ver si ya lo agregamos.
+                // Si ya estaba agregado, le sumamos un voto
+                var existe = false;
+                foreach (var resultadoJornada in resultado)
+                {
+                    if (resultadoJornada.Candidato.Id == candidatoVotado.Id)
+                    {
+                        resultadoJornada.CantidadDeVotos = resultadoJornada.CantidadDeVotos + 1;
+                        existe = true;
+                        break;
+                    }
+                }
+
+                // Si no estaba agregado a la lista, lo agregamos con un voto
+                if (!existe)
+                {
+                    var r = new ResultadoJornada();
+                    r.Candidato = candidatoVotado;
+                    r.CantidadDeVotos = 1;
+
+                    resultado.Add(r);
+                }
             }
 
-            var rm = new ResultadoMapper();
-            rm.Grabar(resultado);
+            //var rm = new ResultadoMapper();
+            //rm.Grabar(resultado);
 
             return resultado;
-
 
         }
         

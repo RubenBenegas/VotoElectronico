@@ -11,7 +11,7 @@ namespace Entidades
 
         public string Mesa { get; set; }
             
-        public Candidato RegistroVoto { get; set; }
+        public Candidato CandidatoAQuienSeVoto { get; set; }
 
     }
 }
