@@ -37,7 +37,7 @@ namespace VotoElectronicoBeta
             var candidato = (Candidato) candidatoBindingSource.Current;
 
             var jr = new JornadaRule();
-            jr.Votar(candidato, "001", VotanteActual, null); /*En null pasar la propiedad JornadaActual 
+            jr.Votar(candidato, "001", VotanteActual, JornadaActual); /*En null pasar la propiedad JornadaActual 
                                                                cuyo valor debe ser obtenido de una entidad JornadaElectoral*/
 
             

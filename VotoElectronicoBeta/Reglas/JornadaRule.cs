@@ -133,7 +133,10 @@ namespace Reglas
             var vm = new VotoMapper();
             vm.Grabar(nuevoVoto);
 
-            //jornada.VotantesQueVotaron.Add(votanteQueVoto);
+            jornada.VotantesQueVotaron.Add(votanteQueVoto);
+
+            var jm = new JornadaMapper();
+            jm.Grabar(jornada);
 
         }
 

@@ -25,7 +25,6 @@ namespace VotoElectronicoBeta
 
         private void aceptarButton_Click(object sender, EventArgs e)
         {
-
             var nombreABuscar = nombreTextBox.Text;
 
             var oj = new JornadaRule();
@@ -43,10 +42,8 @@ namespace VotoElectronicoBeta
 
             if(votante == null)
             {
-
                 MessageBox.Show("La persona con este DNI no forma parte del padron.");
                 return;
-
             }
 
             Close();
@@ -57,9 +54,7 @@ namespace VotoElectronicoBeta
                 vf.VotanteActual = votante;
                 vf.JornadaActual = jornada;
                 vf.Show();
-            }
-            
-           
+            }                
         }
 
         private void cancelarButton_Click(object sender, EventArgs e)

@@ -9,6 +9,12 @@ namespace Entidades
 {
     public class JornadaElectoral: EntidadBase
     {
+
+        public JornadaElectoral()
+        {
+            VotantesQueVotaron = new List<Votante>();
+        }
+
         public string Nombre { get; set; }
 
         public string Fecha { get; set; }
